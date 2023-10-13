@@ -1,0 +1,236 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1046{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil Calibri;}}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs24\lang22 1 - Fazer um programa para ler a primeira letra do estado civil de uma pessoa (Solteiro, Casado, Vi\'favo, Divorciado, dEsquitado) e mostrar uma mensagem com a descri\'e7\'e3o. Considere letras mai\'fasculas e min\'fasculas. Mostre mensagem de erro, se necess\'e1rio.\par
+\ul algoritmo\ulnone  ESTADO_CIVIL\ul\par
+\ulnone      \ul inicio\par
+\ulnone           \ul caractere:\ulnone  estado;\par
+          \ul escreva\ulnone ("Escolha o estado civil");\par
+          \ul escreva\ulnone ("Casado - C");\par
+          \ul escreva\ulnone ("Desquitado - E");\par
+          \ul escreva\ulnone ("Divorciado - D");\par
+          \ul escreva\ulnone ("Solteiro - S");\par
+          \ul escreva\ulnone ("Vi\'favo -V");\par
+          \ul leia\ulnone (estado);\par
+          \ul escolha\ulnone (estado)\par
+          \ul inicio\ulnone\par
+               \ul caso\ulnone  'c', 'C' : \ul escreva\ulnone ("\'c9 o indiv\'edduo que possui uma uni\'e3o matrimonial atrav\'e9s do casamento civil, independente do regime de bens adotado.");\par
+               \ul caso\ulnone  'e', 'E' : \ul escreva\ulnone ("\'c9 quem n\'e3o vive mais com o companheiro, por\'e9m ainda n\'e3o est\'e1 divorciado. A pessoa que est\'e1 separada, pode decretar a separa\'e7\'e3o judicial, para acabar com os deveres da sociedade conjugal.");\par
+               \ul caso\ulnone  'd', 'D' : \ul escreva\ulnone ("Divorciado");\par
+               \ul caso\ulnone  's', 'S' : \ul escreva\ulnone ("\'c9 a pessoa que nunca se casou, independente se possui um relacionamento est\'e1vel ou n\'e3o.");\par
+               \ul caso\ulnone  'v', 'V' : \ul escreva\ulnone ("\'c9 o indiv\'edduo que o c\'f4njuge (marido ou esposa) faleceu.");\par
+               \ul caso-contr\'e1rio:\ulnone  \ul escreva\ulnone ("Estado civil desconhecido!");\par
+          \ul fim-escolha;\ulnone\par
+     \ul fim;\par
+fim-algoritmo.\ulnone\par
+_____________________________________________________________________\par
+2 - Fazer um programa para ler um c\'f3digo (n\'famero inteiro) e mostrar uma mensagem de acordo com a tabela abaixo.\par
+
+\pard\fi568\sl276\slmult1 C\'f3digo                               Mensagem\par
+1                                        Grupo com 50% de promo\'e7\'e3o\par
+3 ou 5                                Grupo sem desconto\par
+10 at\'e9 20                           Grupo com 10% de desconto\par
+
+\pard\fi568\sa200\sl276\slmult1 outro                                 C\'f3digo n\'e3o v\'e1lido\par
+
+\pard\sa200\sl276\slmult1\ul algoritmo\ulnone  SALARIO\ul\par
+\ulnone      \ul inicio\par
+\ulnone           \ul inteiro:\ulnone  num;\par
+          \ul escreva\ulnone ("Insira o c\'f3digo");\par
+          \ul leia\ulnone (num);\par
+          \ul escolha\ulnone (num)\par
+          \ul inicio\ulnone\par
+               \ul caso\ulnone  1 : \ul escreva\ulnone ("Grupo com 50% de promo\'e7\'e3o");\par
+               \ul caso\ulnone  3, 5 : \ul escreva\ulnone ("Grupo sem desconto");\par
+               \ul caso\ulnone  10..20 : \ul escreva\ulnone ("Grupo com 10% de desconto");\par
+               \ul caso-contr\'e1rio:\ulnone  \ul escreva\ulnone ("C\'f3digo n\'e3o v\'e1lido");\par
+          \ul fim-escolha;\ulnone\par
+     \ul fim;\par
+fim-algoritmo.\ulnone\par
+_____________________________________________________________________\par
+3 - Um vendedor necessita de um programa que calcule o pre\'e7o total devido por um cliente. O programa deve receber o c\'f3digo de um produto e a quantidade comprada e calcular o pre\'e7o total, usando a tabela abaixo. Mostrar uma mensagem no caso de c\'f3digo inv\'e1lido.\par
+
+\pard\fi568\sl276\slmult1 C\'f3digo Produto                   Pre\'e7o Unit\'e1rio\par
+1001                                     R$ 5,32\par
+1324                                     R$ 6,45\par
+6548                                     R$ 2,37\par
+987                                       R$ 5,32\par
+
+\pard\fi568\sa200\sl276\slmult1 7623                                     R$ 6,45\par
+
+\pard\sa200\sl276\slmult1\ul algoritmo\ulnone  VENDEDOR\ul\par
+\ulnone      \ul inicio\par
+\ulnone           \ul int:\ulnone  codigo, quantidade;\par
+          \ul escreva\ulnone ("Informe o c\'f3digo do produto desejado e quantidade comprada");\par
+          \ul leia\ulnone (codigo, quantidade);\par
+          \ul escolha\ulnone (codigo)\par
+          \ul inicio\ulnone\par
+               \ul caso\ulnone  987 : \ul escreva\ulnone ("O valor total a ser pago \'e9 R$:", quantidade*5,32);\par
+               \ul caso\ulnone  1001 : \ul escreva\ulnone ("O valor total a ser pago \'e9 R$:", quantidade*5,32);\par
+               \ul caso\ulnone  1324 : \ul escreva\ulnone ("O valor total a ser pago \'e9 R$:", quantidade*6,45);\par
+               \ul caso\ulnone  6548 : \ul escreva\ulnone ("O valor total a ser pago \'e9 R$:", quantidade*2,37);\par
+               \ul caso\ulnone  7623 : \ul escreva\ulnone ("O valor total a ser pago \'e9 R$:", quantidade*6,45);\par
+               \ul caso-contr\'e1rio:\ulnone  \ul escreva\ulnone ("C\'f3digo inv\'e1lido!");\par
+          \ul fim-escolha;\ulnone\par
+     \ul fim;\par
+fim-algoritmo.\ulnone\par
+_____________________________________________________________________\par
+4 - Crie um programa para ler uma letra e mostrar uma mensagem: se \'e9 vogal mai\'fascula, vogal min\'fascula ou consoante. Considere somente as letras do alfabeto.\par
+\ul algoritmo\ulnone  VERIFICA_CAIXA\ul\par
+\ulnone      \ul inicio\par
+\ulnone           \ul caractere:\ulnone  letra;\par
+          \ul escreva\ulnone ("Insira uma letra");\par
+          \ul leia\ulnone (letra);\par
+          \ul escolha\ulnone (letra)\par
+          \ul inicio\ulnone\par
+               \ul caso\ulnone  'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' : \ul escolha\ulnone (letra)\par
+                               \ul inicio\ulnone\par
+                               \ul caso\ulnone  'a', 'e', 'i', 'o', 'u' : \ul escreva\ulnone ("A letra inserida \'e9 uma vogal min\'fascula");\par
+                               \ul caso-contr\'e1rio:\ulnone  \ul escreva\ulnone ("A letra inserida \'e9 uma consoante min\'fascula");\par
+\ul\par
+\ulnone                \ul caso\ulnone  'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'  : \ul escolha\ulnone (letra)\par
+                                        \ul inicio\ulnone\par
+                                           \ul caso\ulnone  'A', 'E', 'I', 'O', 'U' : \ul escreva\ulnone ("A letra inserida \'e9 uma vogal mai\'fascula");\par
+\par
+                                        \ul caso-contr\'e1rio:\ulnone  \ul escreva\ulnone ("A letra inserida \'e9 uma consoante mai\'fascula");\par
+\ul\par
+\ulnone                \ul caso-contr\'e1rio:\ulnone  \ul escreva\ulnone ("Letra desconhecida! Utilize apenas letras do alfabeto");\par
+          \ul fim-escolha;\ulnone\par
+     \ul fim;\par
+fim-algoritmo.\ulnone\par
+_____________________________________________________________________\par
+5 - Criar um programa para ler o pre\'e7o e a categoria de um produto. Calcular o reajuste de acordo com a categoria: se a mesma for A=50%, B=25%, C=15% e outras 5%. Depois mostre o valor antigo, o percentual de reajute e o valor reajustado.\par
+\ul algoritmo\ulnone  REAJUSTE_PRECO\ul\par
+\ulnone      \ul inicio\par
+\ulnone           \ul caractere:\ulnone  categoria;\par
+          \ul real:\ulnone  preco; \par
+          \ul escreva\ulnone ("Informe o pre\'e7o e a categoria do produto");\par
+          \ul leia\ulnone (preco, categoria);\par
+          \ul escolha\ulnone (categoria)\par
+          \ul inicio\ulnone\par
+               \ul caso\ulnone  'A' : \ul escreva\ulnone ("O valor antigo era R$:", preco, "; o reajuste ser\'e1 de 50%, deixando o pre\'e7o R$:", preco*0,5);\par
+               \ul caso\ulnone  'B' : \ul escreva\ulnone ("O valor antigo era R$:", preco, "; o reajuste ser\'e1 de 25%, deixando o pre\'e7o R$:", preco*0,25);\par
+               \ul caso\ulnone  'C' : \ul escreva\ulnone ("O valor antigo era R$:", preco, "; o reajuste ser\'e1 de 15%, deixando o pre\'e7o R$:", preco*0,15);\par
+               \ul caso\ulnone  'D' : \ul escreva\ulnone ("O valor antigo era R$:", preco, "; o reajuste ser\'e1 de 5%, deixando o pre\'e7o R$:", preco*0,05);\par
+               \ul caso-contr\'e1rio:\ulnone  \ul escreva\ulnone ("Categoria desconhecida!");\par
+          \ul fim-escolha;\ulnone\par
+     \ul fim;\par
+fim-algoritmo.\ulnone\par
+_____________________________________________________________________\par
+
+\pard\sl276\slmult1 6 - Perguntar ao usu\'e1rio se ele deseja calcular:\par
+1) a \'e1rea de um tri\'e2ngulo;\par
+2) a \'e1rea de um circulo;\par
+3) a \'e1rea de um cubo;\par
+4) a \'e1rea de um cilindro.\par
+
+\pard\sa200\sl276\slmult1      Solicitar os dados necess\'e1rios para calcular a \'e1rea escolhida, e mostrar o resultado na tela.\par
+\ul algoritmo\ulnone  CALCULA_AREA\ul\par
+\ulnone      \ul inicio\par
+\ulnone           \ul caractere:\ulnone  forma;\par
+          \ul real:\ulnone  medida1, medida2;\par
+          \ul escreva\ulnone ("Informe a forma geom\'e9trica desejada");\par
+          \ul escreva\ulnone ("Cilindro - C");\par
+          \ul escreva\ulnone ("C\'edrculo - R");\par
+          \ul escreva\ulnone ("Cubo - U");\par
+          \ul escreva\ulnone ("Tri\'e2ngulo - T");\par
+          \ul leia\ulnone (forma);\par
+          \ul escolha\ulnone (forma)\par
+          \ul inicio\ulnone\par
+               \ul caso\ulnone  'C' : \ul escreva\ulnone ("Informe a altura e o raio do cilindro");\par
+                               \ul leia\ulnone (medida1, medida2);\par
+                               \ul escreva\ulnone ("A \'e1rea do cilindro \'e9 ", 2 * 3,14 * medida2 * (medida2 + medida1));\par
+               \ul caso\ulnone  'R' : \ul escreva\ulnone ("Informe o raio do c\'edrculo");\par
+                               \ul leia\ulnone (medida1);\par
+                               \ul escreva\ulnone ("A \'e1rea do c\'edrculo \'e9 ", 3,14 * pow(medida1,2));\par
+               \ul caso\ulnone  'U' : \ul escreva\ulnone ("Informe a medida do lado do cubo");\par
+                               \ul leia\ulnone (medida1);\par
+                               \ul escreva\ulnone ("A \'e1rea do cubo \'e9 ", 6 * pow(medida,2));\par
+               \ul caso\ulnone  'T' : \ul escreva\ulnone ("Informe a altura e a base do tri\'e2ngulo");\par
+                               \ul leia\ulnone (medida1, medida2);\par
+                               \ul escreva\ulnone ("A \'e1rea do tri\'e2ngulo \'e9 ", (medida2*medida1)/2);\par
+               \ul caso-contr\'e1rio:\ulnone  \ul escreva\ulnone ("Forma geom\'e9trica desconhecida!");\par
+          \ul fim-escolha;\ulnone\par
+     \ul fim;\par
+fim-algoritmo.\ulnone\par
+_____________________________________________________________________\par
+7 - Elabore um algoritmo que, apresente um menu, com as seguintes op\'e7\'f5es : Calcular a m\'e9dia aritm\'e9tica, Calcular a m\'e9dia harm\'f4nica e Calcular a m\'e9dia geom\'e9trica. E conforme a op\'e7\'e3o do usu\'e1rio realize a opera\'e7\'e3o selecionada.\par
+\ul algoritmo\ulnone  MEDIAS\ul\par
+\ulnone      \ul inicio\par
+\ulnone           \ul inteiro:\ulnone  conta;\ul\par
+\ulnone           \ul real:\ulnone  valor1, valor2, valor3;\par
+          \ul escreva\ulnone ("Apenas calcula tr\'eas valores");\par
+          \ul escreva\ulnone ("1. Calcular a m\'e9dia aritm\'e9tica");\par
+          \ul escreva\ulnone ("2. Calcular a m\'e9dia harm\'f4nica");\par
+          \ul escreva\ulnone ("3. Calcular a m\'e9dia geom\'e9trica");\par
+          \ul leia\ulnone (valor1, valor2, valor3);\par
+          \ul escolha\ulnone (conta)\par
+          \ul inicio\ulnone\par
+               \ul caso\ulnone  1 : \ul escreva\ulnone ("A m\'e9dia aritm\'e9tica \'e9 ", (valor1 + valor2 + valor3)/3);\par
+               \ul caso\ulnone  2 : \ul escreva\ulnone ("A m\'e9dia harm\'f4nica \'e9 ", (valor1 * valor2 * valor3)**(1/3));\par
+               \ul caso\ulnone  3 : \ul escreva\ulnone ("A m\'e9dia geom\'e9trica \'e9 ", 3/(1/valor1 + 1/valor2 + 1/valor3));\par
+               \ul caso-contr\'e1rio:\ulnone  \ul escreva\ulnone ("C\'e1lculo desconhecido!");\par
+          \ul fim-escolha;\ulnone\par
+     \ul fim;\par
+fim-algoritmo.\ulnone\par
+_____________________________________________________________________\par
+8 - Construa um programa que, tendo como dados de entrada o pre\'e7o de um produto e um c\'f3digo de origem, mostre o pre\'e7o junto de sua proced\'eancia (Ex.: 500.00 \f1\endash  Sul). Caso o c\f0\'f3digo n\'e3o seja nenhum dos especificados, o produto deve ser encarado como importado.\par
+C\'f3digo de origem:\par
+
+\pard\sl276\slmult1 1 \f1\endash  Sul \par
+2 \endash  Norte \par
+3 \endash  Leste \par
+4 \endash  Oeste \par
+5 ou 6 \endash  Nordeste\par
+7 ou 8 ou 9 \endash  Sudeste\par
+10 at\f0\'e9 20 \f1\endash  Centro Oeste\par
+
+\pard\sa200\sl276\slmult1 25 at\f0\'e9 50 \f1\endash  Nordeste\f0\par
+\ul algoritmo\ulnone  REGIAO\ul\par
+\ulnone      \ul inicio\par
+\ulnone           \ul inteiro:\ulnone  codigo;\par
+          \ul real:\ulnone  preco;\par
+          \ul escreva\ulnone ("Informe o c\'f3digo e o pre\'e7o do produto");\par
+          \ul leia\ulnone (codigo, preco);\par
+          \ul escolha\ulnone (codigo)\par
+          \ul inicio\ulnone\par
+               \ul caso\ulnone  1 : \ul escreva\ulnone (preco, " - Sul");\par
+               \ul caso\ulnone  2 : \ul escreva\ulnone (preco, " - \f1 Norte\f0 ");\par
+               \ul caso\ulnone  3 : \ul escreva\ulnone (preco, " - \f1 Leste\f0 ");\par
+               \ul caso\ulnone  4 : \ul escreva\ulnone (preco, " - \f1 Oeste\f0 ");\par
+               \ul caso\ulnone  5, 6, 25..50 : \ul escreva\ulnone (preco, " - \f1 Nordeste\f0 ");\par
+               \ul caso\ulnone  7, 8, 9 : \ul escreva\ulnone (preco, " - \f1 Sudeste\f0 ");\par
+               \ul caso\ulnone  10..20 : \ul escreva\ulnone (preco, " - \f1 Centro Oeste\f0 ");\par
+               \ul caso-contr\'e1rio:\ulnone  \ul escreva\ulnone (preco, " - Importado");\par
+          \ul fim-escolha;\ulnone\par
+     \ul fim;\par
+fim-algoritmo.\ulnone\par
+_____________________________________________________________________\par
+9 - Desenvolva um programa para fazer a convers\'e3o de Real para Dollar e vice e versa. Para isso o usu\'e1rio dever\'e1 informar o valor em uma moeda a cota\'e7\'e3o e fazer a sua convers\'e3o. Apresente o valor convertido. \par
+\ul algoritmo\ulnone  CONVERSOR_MOEDAS\ul\par
+\ulnone      \ul inicio\par
+\ulnone           \ul inteiro:\ulnone  moeda;\par
+          \ul real:\ulnone  valor, cotacao;\par
+          \ul escreva\ulnone ("Escolha a moeda desejada:");\par
+          \ul escreva\ulnone ("1. D\'f3llar");\par
+          \ul escreva\ulnone ("2. Real");\par
+          \ul leia\ulnone (moeda);\par
+          \ul escolha\ulnone (moeda)\par
+          \ul inicio\ulnone\par
+               \ul caso\ulnone  1 : \ul escreva\ulnone ("Informe o valor em real que voc\'ea deseja converter em d\'f3llar");\par
+                            \ul leia\ulnone (valor);\par
+                            \ul escreva\ulnone ("Informe a cota\'e7\'e3o atual do d\'f3llar");\par
+                            \ul leia\ulnone (cotacao);\par
+                            \ul escreva\ulnone ("U$: ", valor*cotacao);\par
+               \ul caso\ulnone  2 : \ul escreva\ulnone ("Informe o valor em d\'f3llar que voc\'ea deseja converter em real");\par
+                            \ul leia\ulnone (valor);\par
+                            \ul escreva\ulnone ("Informe a cota\'e7\'e3o atual do real");\par
+                            \ul leia\ulnone (cotacao);\par
+                            \ul escreva\ulnone ("R$: ", valor*cotacao);\par
+               \ul caso-contr\'e1rio:\ulnone  \ul escreva\ulnone ("Moeda desconhecida!");;\par
+          \ul fim-escolha;\ulnone\par
+     \ul fim;\par
+fim-algoritmo.\ulnone\par
+_____________________________________________________________________\par
+\fs22\par
+}
+ 

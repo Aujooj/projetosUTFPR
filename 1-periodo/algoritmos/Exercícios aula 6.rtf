@@ -1,0 +1,165 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1046{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset1 Cambria Math;}}
+{\*\generator Riched20 10.0.19041}{\*\mmathPr\mmathFont1\mwrapIndent1440 }\viewkind4\uc1 
+\pard\ri-72\sa200\sl276\slmult1\f0\fs24\lang22 1 - Fa\'e7a um algoritmo que leia um n\'famero inteiro no programa principal passando-o como par\'e2metro a um procedimento que calcule e escreva a sua tabuada.\par
+\ul algoritmo\ulnone  TABUADA\par
+     \ul procedimento\ulnone  calculaTabuada(\ul inteiro:\ulnone  multiplicando)\par
+          \ul in\'edcio\par
+\ulnone                \ul inteiro:\ulnone  multiplicador, resultado;\par
+               multiplicador \f1\u8592?\f0\lang22  0;\par
+               \ul enquanto \ulnone (multiplicador <= 10) \ul fa\'e7a\par
+\ulnone                \ul in\'edcio\par
+\ulnone                     resultado \f1\u8592?\f0\lang1046  multiplicando * multiplicador\lang22 ;\par
+                    \ul escreva\ulnone (multiplicando, "x", multiplicador, "=", resultado);\par
+                    multiplicador \f1\u8592?\f0\lang22  multiplicador + 1;\par
+               \ul fim-enquanto;\ulnone\par
+          \ul fim;\ulnone\par
+     \ul fim-procedimento.\ulnone\par
+\ul\{programa principal\}\ulnone\par
+     \ul inicio\par
+\ulnone           \ul inteiro:\ulnone  num;\par
+          \ul escreva\ulnone ("Informe um n\'famero");\par
+          \ul leia\ulnone (num);\par
+          calculaTabuada(num);\ul\par
+\ulnone      \ul fim;\par
+fim-algoritmo._____________________________________________________________________\par
+\ulnone 2 - Elabore um algoritmo que efetue o calculo de um numero elevado a um expoente. Utilize uma fun\'e7\'e3o especifica para o calculo, que retorne seu valor.\par
+\ul algoritmo\ulnone  POTENCIA\par
+     \ul fun\'e7\'e3o\ulnone  calculaPotencia(\ul inteiro:\ulnone  base, \ul inteiro:\ulnone  expoente): \ul inteiro\ulnone\par
+          \ul inicio\par
+\ulnone                \ul inteiro:\ulnone  res, contaTemporario;\par
+               contaAux \f1\u8592?\f0\lang22  base;\par
+               \ul se\ulnone  (expoente = 0) \ul sen\'e3o\ulnone\par
+                    \ul retorna\ulnone  1;\par
+               \ul sen\'e3o\ulnone\par
+                    \ul enquanto\ulnone  (expoente >= 1) \ul fa\'e7a\par
+\ulnone                          contaAux \f1\u8592?\f0\lang22  contaAux * base;\par
+                         expoente \f1\u8592?\f0\lang1046  expoente - 1;\lang22\par
+                    \ul fim-enquanto;\ulnone\par
+                    res \f1\u8592?\f0\lang1046  contaAux\lang22 ;\par
+                    \ul retorna\ulnone  res;\par
+               \ul fim-se\ulnone ;\par
+          \ul fim;\par
+\ulnone      \ul fim-fun\'e7\'e3o.\par
+\{programa principal\}\par
+\ulnone      \ul inicio\par
+\ulnone           \ul inteiros:\ulnone  num1, num2, resultado, confirma\'e7\'e3o, ciclo;\par
+          ciclo \f1\u8592?\f0\lang22  1;\par
+          \ul enquanto \ulnone (ciclo = 1) \ul fa\'e7a\ulnone\par
+               \ul escreva\ulnone ("Informe uma base");\par
+               \ul leia\ulnone (num1);\par
+               \ul escreva\ulnone ("Informe uma expoente");\par
+               \ul leia\ulnone (num2);\par
+               resultado \f1\u8592?\f0\lang22  calculaPotencia(num1, num2);\par
+               \ul escreva\ulnone (num1, " elevado a ", num2, " \'e9 igual a: ", resultado);\par
+               \ul escreva\ulnone ("Voc\'ea deseja calcular mais uma vez?");\par
+               \ul escreva\ulnone ("0. N\'e3o");\par
+               \ul escreva\ulnone ("1. Sim?");\par
+               \ul leia\ulnone (confirma\'e7\'e3o);\par
+               \ul se\ulnone  (confirma\'e7\'e3o = 0) \ul ent\'e3o\par
+\ulnone                     \ul escreva\ulnone ("Encerrando ...");\par
+                    ciclo \f1\u8592?\f0\lang22  0;\par
+               \ul sen\'e3o\ulnone  \ul se\ulnone  (confirma\'e7\'e3o = 1) \ul ent\'e3o\par
+\ulnone                     \ul escreva\ulnone ("O programa vai continuar!");\par
+               \ul sen\'e3o\par
+\ulnone                     \ul escreva\ulnone ("N\'famero desconhecido! O programa vai continuar!");\par
+               \ul fim-se;\ulnone\par
+          \ul fim-enquanto;\par
+\ulnone      \ul fim;\par
+fim-algoritmo._____________________________________________________________________\par
+\ulnone 3 - Fa\'e7a um algoritmo que simule uma contagem regressiva de 10 minutos ou seja 10:00 e ent\'e3o mostre 9:59, 9:58 ... 8:59: 8:58 ... at\'e9 0:00.\par
+\ul algoritmo\ulnone  CRONOMETRO\par
+     \ul inicio\par
+\ulnone           \ul inteiro:\ulnone  minutos, segundos;\par
+          minutos \f1\u8592?\f0\lang22  10;\par
+          \ul enquanto\ulnone  (minutos >= 0) \ul fa\'e7a\par
+\ulnone                \ul enquanto\ulnone  (segundos >= 0) \ul fa\'e7a\ulnone\par
+                   \ul escreva\ulnone (minutos, ":", segundos);\par
+                   segundos \f1\u8592?\f0\lang22  segundos - 1;\par
+               \ul fim-enquanto;\par
+\ulnone           segundos \f1\u8592?\f0\lang22  59;\ul\par
+\ulnone           minutos \f1\u8592?\f0\lang22  minutos - 1;\par
+          \ul fim-enquanto;\par
+\ulnone      \ul fim;\par
+fim-algoritmo._____________________________________________________________________\par
+
+\pard\ri-72\sl276\slmult1\ulnone 4 - Fa\'e7a um algoritmo no qual o usu\'e1rio informa um n\'famero x de valores e verifique quantos deles est\'e3o entre:\par
+
+\pard\fi284\ri-72\sl276\slmult1 0 e 24;\par
+
+\pard\fi284\ri-72\sa200\sl276\slmult1 25 e 50.\par
+
+\pard\ri-72\sa200\sl276\slmult1\ul algoritmo\ulnone  VERIFICA_NUM\par
+     \ul inicio\par
+\ulnone           \ul inteiro:\ulnone  repeticao, num;\par
+          \ul escreva\ulnone ("Informe quantos n\'fameros voc\'ea deseja verificar");\par
+          \ul leia\ulnone (repeticao);\par
+          \ul enquanto\ulnone  (repeticao >= 1) \ul fa\'e7a\par
+\ulnone                \ul escreva\ulnone ("Informe o n\'famero");\par
+               \ul leia\ulnone (num);\par
+               \ul se\ulnone  ((num >= 0) E (num <= 24)) \ul ent\'e3o\ulnone\par
+                    \ul escreva\ulnone ("Este n\'famero est\'e1 entre 0 e 24");\par
+               \ul sen\'e3o se\ulnone  ((num >= 25) E (num <= 50)) \ul ent\'e3o\ulnone\par
+                    \ul escreva\ulnone ("Este n\'famero est\'e1 entre 25 e 50");\par
+               \ul sen\'e3o\par
+\ulnone                     \ul escreva\ulnone ("N\'famero fora do escopo do programa!");\par
+               \ul fim-se;\par
+\ulnone           \ul fim-enquanto;\par
+\ulnone      \ul fim;\par
+fim-algoritmo._____________________________________________________________________\par
+\ulnone 5 - Fa\'e7a um algoritmo para calcular a seguinte serie:\par
+
+\pard\ri-72\sa200\sl276\slmult1\qc 1/pot(1/1)-1/pot(3/4)+1/pot(5/7)-1/pot(7/10)\par
+
+\pard\ri-72\sa200\sl276\slmult1 Informe a quantidade de termos que ser\'e1 calculado.\par
+\ul algoritmo\ulnone  CALCULA_TERMOS\par
+     \ul fun\'e7\'e3o\ulnone  calculaPotencia(\ul inteiro:\ulnone  base, \ul inteiro:\ulnone  expoente): \ul inteiro\ulnone\par
+          \ul inicio\par
+\ulnone                \ul inteiro:\ulnone  res, contaTemporario;\par
+               contaAux \f1\u8592?\f0\lang22  base;\par
+               \ul se\ulnone  (expoente = 0) \ul sen\'e3o\ulnone\par
+                    \ul retorna\ulnone  1;\par
+               \ul sen\'e3o\ulnone\par
+                    \ul enquanto\ulnone  (expoente >= 1) \ul fa\'e7a\par
+\ulnone                          contaAux \f1\u8592?\f0\lang22  contaAux * base;\par
+                         expoente \f1\u8592?\f0\lang1046  expoente - 1;\lang22\par
+                    \ul fim-enquanto;\ulnone\par
+                    res \f1\u8592?\f0\lang1046  contaAux\lang22 ;\par
+                    \ul retorna\ulnone  res;\par
+               \ul fim-se\ulnone ;\par
+          \ul fim;\par
+\ulnone      \ul fim-fun\'e7\'e3o.\par
+\{programa principal\}\par
+\ulnone      \ul inicio\par
+\ulnone           \ul inteiros:\ulnone  num1, num2, resultado1, resultado2, termos, vez;\par
+          num1 \f1\u8592?\f0\lang22  1;\par
+          num2 \f1\u8592?\f0\lang22  1;\par
+          ver \f1\u8592?\f0\lang22  0;\par
+          \ul escreva\ulnone ("Informe quantos termos deseja calcular");\par
+          leia(termos);\par
+          \ul enquanto\ulnone  (termos >= 1) \ul fa\'e7a\par
+\ulnone                \ul se\ulnone  (vez = 0) \ul ent\'e3o\par
+\ulnone                     resultado1 \f1\u8592?\f0\lang22  calculaPotencia(num1, num2);\par
+                    num1 \f1\u8592?\f0\lang22  num1 + 2;\par
+                    num2 \f1\u8592?\f0\lang22  num2 + 3;\par
+                    vez \f1\u8592?\f0\lang1046  vez\lang22  + 1;\par
+               \ul sen\'e3o se\ulnone  (vez%2 = 1) \ul ent\'e3o\par
+\ulnone                     resultado2 \f1\u8592?\f0\lang22  calculaPotencia(num1, num2);\par
+                    resultado2 \f1\u8592?\f0\lang22  1 / resultado2;\par
+                    num1 \f1\u8592?\f0\lang22  num1 + 2;\par
+                    num2 \f1\u8592?\f0\lang22  num2 + 3;\par
+                    resultado1 \f1\u8592?\f0\lang22  resultado1 - resultado2;\par
+                    vez \f1\u8592?\f0\lang1046  vez\lang22  + 1;\par
+               \ul sen\'e3o\par
+\ulnone                     resultado2 \f1\u8592?\f0\lang22  calculaPotencia(num1, num2);\par
+                    resultado2 \f1\u8592?\f0\lang22  1 / resultado2;\par
+                    num1 \f1\u8592?\f0\lang22  num1 + 2;\par
+                    num2 \f1\u8592?\f0\lang22  num2 + 3;\par
+                    resultado1 \f1\u8592?\f0\lang22  resultado1 + resultado2;\par
+                    vez \f1\u8592?\f0\lang1046  vez\lang22  + 1;\par
+               \ul fim-se;\ulnone\par
+          \ul fim-enquanto;\ulnone\par
+          \ul escreva\ulnone (resultado1);\ul\par
+\ulnone      \ul fim;\par
+fim-algoritmo._____________________________________________________________________\ulnone\fs22\par
+}
+ 

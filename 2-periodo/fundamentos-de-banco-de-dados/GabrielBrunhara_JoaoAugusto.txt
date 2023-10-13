@@ -1,0 +1,208 @@
+-- Membros do Grupo:
+-- Gabriel (...) Brunhara, RA: *******;
+-- João Augusto de Souza Santos, RA: *******.
+
+CREATE DATABASE BancoSangue;
+USE BancoSangue;
+
+-- Criação da Base de Dados.
+
+CREATE TABLE Endereco (
+IDEndereco INTEGER NOT NULL AUTO_INCREMENT,
+CEP CHAR(9),
+Rua VARCHAR(100),
+Bairro VARCHAR(50),
+Cidade VARCHAR(50),
+UF CHAR(2),
+PRIMARY KEY PK_Endereco(IDEndereco)
+);
+
+CREATE TABLE Exame_Triagem (
+IDExameTriagem INTEGER NOT NULL AUTO_INCREMENT,
+Nome VARCHAR(150),
+ValorBaseInferior DECIMAL(5,0),
+ValorBaseSuperior DECIMAL(5,0),
+PRIMARY KEY PK_ExameTriagem(IDExameTriagem)
+);
+
+CREATE TABLE Exame_Doacao (
+IDExameDoacao INTEGER NOT NULL AUTO_INCREMENT,
+Nome VARCHAR(150),
+ValorBaseInferior DECIMAL(5,0),
+ValorBaseSuperior DECIMAL(5,0),
+PRIMARY KEY PK_ExameDoacao(IDExameDoacao)
+);
+
+CREATE TABLE Doador (
+IDDoador INTEGER NOT NULL AUTO_INCREMENT,
+Nome VARCHAR(150),
+DataNascimento DATE,
+CPF CHAR(14), 
+RG CHAR(12),
+TipoSanguineo ENUM('A', 'B', 'AB', 'O'),
+FatorRH ENUM('Negativo', 'Positivo'),
+NomePai VARCHAR(150),
+NomeMae VARCHAR(150),
+Telefone CHAR(14),
+Celular CHAR(14),
+Sexo ENUM('Feminino', 'Masculino'),
+IDEndereco INTEGER NOT NULL,
+NroEndereco DECIMAL(5,0),
+PRIMARY KEY PK_Doador(IDDoador),
+FOREIGN KEY FK_Endereco(IDEndereco) REFERENCES Endereco(IDEndereco) ON UPDATE RESTRICT ON DELETE RESTRICT
+);
+
+CREATE TABLE Especialidade (
+IDEspecialidade INTEGER NOT NULL AUTO_INCREMENT,
+Nome VARCHAR(30),
+NroRegistro SMALLINT,
+PRIMARY KEY PK_Especialidade(IDEspecialidade)
+);
+
+CREATE TABLE Funcionario (
+IDFuncionario INTEGER NOT NULL AUTO_INCREMENT,
+Nome VARCHAR(150),
+DataNascimento DATE,
+CPF CHAR(14), 
+RG CHAR(12),
+IDEndereco INTEGER NOT NULL,
+IDEspecialidade INTEGER NOT NULL,
+PRIMARY KEY PK_Funcionario(IDFuncionario),
+FOREIGN KEY FK_Especialidade(IDEspecialidade) REFERENCES Especialidade(IDEspecialidade) ON UPDATE RESTRICT ON DELETE RESTRICT,
+FOREIGN KEY FK_Endereco(IDEndereco) REFERENCES Endereco(IDEndereco) ON UPDATE RESTRICT ON DELETE RESTRICT
+);
+
+CREATE TABLE Doacao (
+IDDoacao INTEGER NOT NULL AUTO_INCREMENT,
+IDDoador INTEGER NOT NULL,
+DataDoacao DATE,
+HoraDoacao TIME,
+IDFuncionario INTEGER NOT NULL,
+PRIMARY KEY PK_Doacao(IDDoacao, IDDoador),
+FOREIGN KEY FK_Doador(IDDoador) REFERENCES Doador(IDDoador) ON UPDATE RESTRICT ON DELETE RESTRICT,
+FOREIGN KEY FK_Funcionario(IDFuncionario) REFERENCES Funcionario(IDFuncionario) ON UPDATE RESTRICT ON DELETE RESTRICT
+);
+
+CREATE TABLE Resultado_Triagem (
+IDResultadoTriagem INTEGER NOT NULL AUTO_INCREMENT,
+IDExameTriagem INTEGER NOT NULL,
+IDDoacao INTEGER NOT NULL,
+DataAnalise DATE,
+HoraAnalise TIME,
+Resultado DECIMAL(5,0),
+DescrDiagnostico VARCHAR(500),
+IDFuncionario INTEGER NOT NULL,
+PRIMARY KEY PK_ResultadoTriagem(IDResultadoTriagem, IDExameTriagem, IDDoacao),
+FOREIGN KEY FK_ExameTriagem(IDExameTriagem) REFERENCES Exame_Triagem(IDExameTriagem) ON UPDATE RESTRICT ON DELETE RESTRICT,
+FOREIGN KEY FK_Doacao(IDDoacao) REFERENCES Doacao(IDDoacao) ON UPDATE RESTRICT ON DELETE RESTRICT,
+FOREIGN KEY FK_Funcionario(IDFuncionario) REFERENCES Funcionario(IDFuncionario) ON UPDATE RESTRICT ON DELETE RESTRICT
+);
+
+CREATE TABLE Resultado_Doacao (
+IDResultadoDoacao INTEGER NOT NULL AUTO_INCREMENT,
+IDExameDoacao INTEGER NOT NULL,
+IDDoacao INTEGER NOT NULL,
+DataAnalise DATE,
+HoraAnalise TIME,
+Resultado DECIMAL(5,0),
+DescrDiagnostico VARCHAR(20),
+IDFuncionario INTEGER NOT NULL,
+PRIMARY KEY PK_ResultadoDoacao(IDResultadoDoacao, IDExameDoacao, IDDoacao),
+FOREIGN KEY FK_ExameDoacao(IDExameDoacao) REFERENCES Exame_Doacao(IDExameDoacao) ON UPDATE RESTRICT ON DELETE RESTRICT,
+FOREIGN KEY FK_Doacao(IDDoacao) REFERENCES Doacao(IDDoacao) ON UPDATE RESTRICT ON DELETE RESTRICT,
+FOREIGN KEY FK_Funcionario(IDFuncionario) REFERENCES Funcionario(IDFuncionario) ON UPDATE RESTRICT ON DELETE RESTRICT
+);
+
+-- Criação do Stored Procedure.
+
+DELIMITER //
+
+CREATE PROCEDURE SP_InsereDoacao(IN PIDDoador INTEGER, PIDFuncionario INTEGER , OUT MENSAGEM VARCHAR(150))
+BEGIN
+	IF (NOT EXISTS (SELECT E.Nome FROM Funcionario F, Especialidade E
+        	    WHERE (E.Nome LIKE 'T_cnico')
+                    AND (PIDFuncionario = IDFuncionario)
+        	    AND (F.IDEspecialidade = E.IDEspecialidade))) THEN
+
+            SET MENSAGEM = 'O funcionário não é um Técnico!';
+        
+	ELSEIF (EXISTS (SELECT D1.IDDoador FROM Doacao D1, Doador D2
+			WHERE((D1.IDDoador = PIDDoador) 
+                        AND(D1.IDDoador =D2.IDDoador)
+			AND (DATEDIFF(CURRENT_DATE, D1.DataDoacao) < 90) 
+			AND (D2.Sexo = 'Masculino')))) THEN
+                        
+			SET MENSAGEM = 'Doador impedido de realizar a doação por não ter completado o prazo mínimo da última doação';
+                  
+	ELSEIF (EXISTS (SELECT D1.IDDoador FROM Doacao D1, Doador D2
+			WHERE((D1.IDDoador = PIDDoador) 
+                        AND(D1.IDDoador =D2.IDDoador)
+			AND (DATEDIFF(CURRENT_DATE, D1.DataDoacao) < 120) 
+			AND (D2.Sexo = 'Feminino')))) THEN
+                        
+			SET MENSAGEM = 'Doadora impedida de realizar a doação por não ter completado o prazo mínimo da última doação';
+        
+	ELSE
+		BEGIN
+        
+			INSERT INTO Doacao (IDDoador, IDFuncionario, HoraDoacao, DataDoacao)
+			VALUES (PIDDoador, PIDFuncionario, CURRENT_TIME, CURRENT_DATE);
+			SET MENSAGEM = 'Doação realizada com sucesso!';
+            
+		END;
+    END IF;
+END//
+
+DELIMITER ;
+
+-- Criação do Trigger.
+
+DELIMITER //
+
+CREATE TRIGGER TR_INSERERESULTDOACAO BEFORE INSERT ON resultado_doacao FOR EACH ROW 
+BEGIN
+	IF (NOT EXISTS (SELECT E.IDExameDoacao FROM Exame_Doacao E
+		WHERE E.IDExameDoacao = NEW.IDExameDoacao))THEN
+
+		SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'O Exame não foi cadastrado.';
+
+	ELSEIF (NOT EXISTS (SELECT D.IDDoacao FROM Doacao D
+		WHERE D.IDDoacao = NEW.IDDoacao))THEN
+
+		SIGNAL SQLSTATE '45001' SET MESSAGE_TEXT = 'A Doação não foi cadastrada.';
+	
+	ELSEIF (NOT EXISTS (SELECT E.Nome FROM Funcionario F, Especialidade E
+        	WHERE (E.Nome LIKE 'Bioqu_mico')
+        	AND (NEW.IDFuncionario = F.IDFuncionario)
+        	AND (F.IDEspecialidade = E.IDEspecialidade))) THEN
+
+		SIGNAL SQLSTATE '45002' SET MESSAGE_TEXT = 'Especialidade incompatível.';
+
+	ELSE
+		BEGIN 
+			IF(EXISTS (SELECT R.Resultado FROM Resultado_Doacao R, Exame_Doacao E
+				   WHERE (NEW.IDExameDoacao = E.IDExameDoacao)
+				   AND (NEW.Resultado < E.ValorBaseInferior))) THEN
+
+				SET NEW.DescrDiagnostico = 'Inconclusivo';
+
+			ELSEIF (EXISTS (SELECT R.Resultado FROM Resultado_doacao R, Exame_Doacao E
+				        WHERE (NEW.IDExamedoacao = E.IDExameDoacao)
+				        AND (NEW.Resultado > E.ValorBaseSuperior))) THEN
+
+            			SET NEW.DescrDiagnostico = 'Reagente';
+
+			ELSE
+
+				SET NEW.DescrDiagnostico = 'Normal';
+
+			END IF;
+
+			SET NEW.DataAnalise = CURRENT_DATE;
+			SET NEW.HoraAnalise = CURRENT_TIME;
+		
+		END;
+	END IF;
+END //
+
+DELIMITER ;

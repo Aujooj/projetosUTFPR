@@ -1,0 +1,968 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1046{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset1 Cambria Math;}{\f2\froman\fcharset0 Times New Roman;}{\f3\fswiss\fcharset2 Wingdings;}}
+{\colortbl ;\red0\green0\blue0;}
+{\*\generator Riched20 10.0.19041}{\*\mmathPr\mmathFont1\mwrapIndent1440 }\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs24\lang22 1 - \cf1 Fa\'e7a um programa que leia um n\'famero inteiro e calcule e escreva a tabuada deste n\'famero (usando estrutura de repeti\'e7\'e3o).\cf0\par
+\ul algoritmo\ulnone  TABUADA\par
+     \ul inicio\par
+\ulnone           \ul inteiro:\ulnone  num1, num2;\ul\par
+\ulnone           \ul escreva\ulnone ("Informe um n\'famero inteiro!");\ul\par
+\ulnone           \ul leia\ulnone (num1);\ul\par
+\ulnone           \ul para\ulnone  num2 \ul de\ulnone  1 \ul at\'e9\ulnone  10 \ul passo\ulnone  1 \ul fa\'e7a\ulnone\par
+               \ul escreva\ulnone (num1, " * ", num2, " = ", num1 * num2);\par
+     \ul fim;\par
+fim-algoritmo.\ulnone\par
+_____________________________________________________________________\par
+2 - \cf1 Fa\'e7a um programa em C que escreve os n\'fameros m\'faltiplos de 7 entre 100 e 200, bem como a soma destes n\'fameros. \cf0\par
+\ul algoritmo\ulnone  MULTIPLOS_SETE\par
+     \ul inicio\par
+\ulnone           \ul inteiro:\ulnone  num1, res \f1\u8592?\f0\lang22  0;\ul\par
+\ulnone           \ul escreva\ulnone (" Esses s\'e3o os n\'fameros m\'faltiplos de 7 entre 100 e 200");\ul\par
+\ulnone           \ul para\ulnone  num1 \ul de\ulnone  105 \ul at\'e9\ulnone  196 \ul passo\ulnone  7 \ul fa\'e7a\ulnone\par
+               \ul in\'edcio\ulnone\par
+                    \ul escreva\ulnone (num1);\par
+                    res \f1\u8592?\f0\lang22  res + num1;\par
+               \ul fim-para;\par
+\ulnone           \ul escreva\ulnone ("E a soma deles \'e9 ", res);\par
+     \ul fim;\par
+fim-algoritmo.\ulnone\par
+_____________________________________________________________________\par
+3 - \cf1 Tem-se um conjunto de dados contendo a altura e o sexo (masculino, feminino) de 50 pessoas. Fazer um algoritmo que calcule e escreva: \par
+
+\pard\fi568\sl276\slmult1 a) a maior e a menor altura do grupo;\par
+b) a m\'e9dia de altura das mulheres;\par
+
+\pard\fi568\sa200\sl276\slmult1 c) o n\'famero de homens.\cf0\par
+
+\pard\sa200\sl276\slmult1\ul algoritmo\ulnone  CONJUTO\par
+     \ul inicio\par
+\ulnone           \ul caractere:\ulnone  sexo;\ul\par
+\ulnone           \ul real:\ulnone  altura, media \f1\u8592?\f0\lang22  0, maiorA \f1\u8592?\f0\lang22  0, menorA \f1\u8592?\f0\lang22 3;\ul\par
+\ulnone           \ul inteiro:\ulnone  ciclo, homens \f1\u8592?\f0\lang22  0, mulheres \f1\u8592?\f0\lang22  0;\ul\par
+\ulnone           \ul para\ulnone  ciclo \ul de\ulnone  0 \ul at\'e9\ulnone  50 \ul passo\ulnone  1 \ul fa\'e7a\par
+\ulnone                \ul in\'edcio\par
+\ulnone                     \ul escreva\ulnone ("Informe o seu sexo");\ul\par
+\ulnone                     \ul leia\ulnone (sexo);\ul\par
+\ulnone                     \ul escreva\ulnone ("Informe a sua altura");\ul\par
+\ulnone                     \ul leia\ulnone (altura);\ul\par
+\ulnone                     \ul se\ulnone  (sexo = 'F') \ul ent\'e3o\par
+\ulnone                          mulheres++;\ul\par
+\ulnone                          media \f1\u8592?\f0\lang22  media + altura;\ul\par
+\ulnone                          \ul se\ulnone  (altura > maiorA) \ul ent\'e3o\ulnone\par
+                              maiorA \f1\u8592?\f0\lang22  altura;\ul\par
+\ulnone                          \ul sen\'e3o se\ulnone  (altura < menorA) \ul ent\'e3o\ulnone\par
+                              menorA \f1\u8592?\f0\lang22  altura;\ul\par
+\ulnone                          \ul fim-se;\ulnone\par
+                    \ul sen\'e3o se\ulnone  (sexo = 'M') \ul ent\'e3o\par
+\ulnone                          homens++;\ul\par
+\ulnone                          \ul se\ulnone  (altura > maiorA) \ul ent\'e3o\ulnone\par
+                              maiorA \f1\u8592?\f0\lang22  altura;\par
+                         \ul sen\'e3o se\ulnone  (altura < menorA) \ul ent\'e3o\ulnone\par
+                              menorA \f1\u8592?\f0\lang22  altura;\par
+                         \ul fim-se;\ulnone\par
+                    \ul sen\'e3o\par
+\ulnone                          \ul escreva\ulnone ("Op\'e7\'e3o inv\'e1lida!");\par
+                    \ul fim-se;\ulnone\par
+               \ul fim-para;\par
+\ulnone           \ul escreva\ulnone ("A maior e a menor altura do grupo s\'e3o: ", maiorA, " e ", menorA);\ul\par
+\ulnone           \ul escreva\ulnone ("A m\'e9dia de altura das mulheres \'e9 ", (real) media / mulheres);\ul\par
+\ulnone           \ul escreva\ulnone ("O n\'famero de homens \'e9 ", homens);\par
+     \ul fim;\par
+fim-algoritmo.\ulnone\par
+_____________________________________________________________________\par
+4 -\cf1\f2  \f0 Escreva um programa para calcular e mostrar o reajuste salarial de uma empresa que possui 1000 funcion\'e1rios, de acordo com os seguintes crit\'e9rios:\f2  \par
+
+\pard\sa9\sl276\slmult1\f3\'fc \f0 os funcion\'e1rios com sal\'e1rio inferior a 10.000,00 devem ter um reajuste de 55%;\f2\par
+\f3\'fc \f0 os funcion\'e1rios com sal\'e1rio entre 10.000,00 (inclusive) e 25.000,00 (inclusive) devem ter um reajuste de 30%;\par
+
+\pard\sa200\sl276\slmult1\f3\'fc \f0 e os funcion\'e1rios com sal\'e1rio superior a 25.000,00 devem ter um reajuste de 20%.\cf0\par
+\ul algoritmo\ulnone  REAJUSTE\par
+     \ul inicio\par
+\ulnone           \ul inteiro:\ulnone  ciclo, funcionario;\par
+          \ul real:\ulnone  salario;\par
+          \ul para\ulnone  ciclo \ul de\ulnone  0 \ul at\'e9\ulnone  1000 \ul passo\ulnone  1 \ul fa\'e7a\ulnone\par
+               \ul escreva\ulnone ("Informe o c\'f3digo do funcion\'e1rio");\par
+               \ul leia\ulnone (funcionario);\par
+               \ul escreva\ulnone (" Informe o sal\'e1rio do funcion\'e1rio");\par
+               \ul leia\ulnone (salario);\par
+               \ul se\ulnone  (salario > 0 E salario < 10000) \ul ent\'e3o\par
+\ulnone                     \ul escreva\ulnone ("O novo sal\'e1rio do funcion\'e1rio ", funcionario, " \'e9 ", salario * 1,55);\par
+               \ul sen\'e3o se\ulnone  (salario >= 10000 E salario <= 25000) \ul ent\'e3o\ulnone\par
+                    \ul escreva\ulnone ("O novo sal\'e1rio do funcion\'e1rio ", funcionario, " \'e9 ", salario * 1,30);\par
+               \ul sen\'e3o se\ulnone  (salario > 25000) \ul ent\'e3o\par
+\ulnone                     \ul escreva\ulnone ("O novo sal\'e1rio do funcion\'e1rio ", funcionario, " \'e9 ", salario * 1,20);\par
+               \ul sen\'e3o\ulnone\par
+                    \ul escreva\ulnone ("Sal\'e1rio inv\'e1lido!");\par
+               \ul fim-se;\ulnone\par
+          \ul fim-para;\ulnone\par
+     \ul fim;\par
+fim-algoritmo.\ulnone\par
+_____________________________________________________________________\par
+5 - \cf1 Fa\'e7a um programa que receba a idade, a altura de 15 pessoas. Calcule e escreva: \par
+
+\pard\fi568\sa9\sl276\slmult1\f3\'fc \f0 a quantidade de pessoas com idade superior a 50 anos;\f2\par
+\f3\'fc \f0 a m\'e9dia das alturas das pessoas com idade entre 10 e 20 anos;\f2\par
+
+\pard\fi568\sa200\sl276\slmult1\f3\'fc \f0 a maior altura encontrada;\cf0\par
+
+\pard\sa200\sl276\slmult1\ul algoritmo\ulnone  IDADE\par
+     \ul inicio\par
+\ulnone           \ul inteiro:\ulnone  idade, idoso \f1\u8592?\f0\lang22  0, jovem \f1\u8592?\f0\lang22  0, pessoas;\ul\par
+\ulnone           \ul real:\ulnone  altura, media \f1\u8592?\f0\lang22  0, maiorA \f1\u8592?\f0\lang22  0;\ul\par
+\ulnone           \ul para\ulnone  ciclo \ul de\ulnone  0 \ul at\'e9\ulnone  15 \ul passo\ulnone  1 \ul fa\'e7a\par
+\ulnone                \ul in\'edcio\par
+\ulnone                     \ul escreva\ulnone ("Informe a sua idade");\ul\par
+\ulnone                     \ul leia\ulnone (idade);\ul\par
+\ulnone                     \ul escreva\ulnone ("Informe a sua altura");\ul\par
+\ulnone                     \ul leia\ulnone (altura);\ul\par
+\ulnone                     \ul se\ulnone  (idade > 50) \ul ent\'e3o\par
+\ulnone                          idoso++;\par
+                    \ul sen\'e3o se\ulnone  (idade >= 10 E idade <= 20) \ul ent\'e3o\par
+\ulnone                          jovem++;\par
+                         media \f1\u8592?\f0\lang22  media + altura;\par
+                    \ul fim-se;\par
+\ulnone                     \ul se\ulnone  (altura > maiorA) \ul ent\'e3o\par
+\ulnone                          maiorA \f1\u8592?\f0\lang22  altura;\ul\par
+\ulnone                     \ul fim-se;\par
+\ulnone                \ul fim-para;\par
+\ulnone           \ul escreva\ulnone ("A quantidade de pessoas com idade superior a 50 anos \'e9 ", idoso);\par
+          \ul escreva\ulnone ("A m\'e9dia das alturas das pessoas com idade entre 10 e 20 anos \'e9 ", (real) media / jovem);\par
+          \ul escreva\ulnone ("A maior altura encontrada \'e9 ", maiorA);\par
+     \ul fim;\par
+fim-algoritmo.\ulnone\par
+_____________________________________________________________________\par
+
+\pard\sl276\slmult1 6 -\cf1\f2  \f0 Fa\'e7a um programa que leia o nome, sexo, peso, altura e idade dos 50 funcion\'e1rios de uma empresa. \par
+
+\pard\fi568\sl276\slmult1 Apresente: \par
+- IMC (\'cdndice de Massa Corporal) de cada funcion\'e1rio; (IMC = peso / altura * altura) \par
+- Percentual de funcion\'e1rios obesos (IMC >= 30); \par
+
+\pard\fi568\sa200\sl276\slmult1 - Percentual de funcion\'e1rios com peso normal (IMC <= 25 para homens e IMC <= 27 para mulheres);\f2\fs23  \cf0\f0\fs24\par
+
+\pard\sa200\sl276\slmult1\ul algoritmo\ulnone  IMC\par
+     \ul inicio\par
+\ulnone           \ul caractere:\ulnone  nomeFuncionario[20], sexo;\ul\par
+\ulnone           \ul inteiro:\ulnone  ciclo, idade, normal \f1\u8592?\f0\lang22  0, obeso \f1\u8592?\f0\lang22  0;\ul\par
+\ulnone           \ul real:\ulnone  altura, peso, IMC;\ul\par
+\ulnone           \ul para\ulnone  ciclo \ul de\ulnone  0 \ul at\'e9\ulnone  50 \ul passo\ulnone  1 \ul fa\'e7a\par
+\ulnone                \ul in\'edcio\par
+\ulnone                     \ul escreva\ulnone ("Informe o seu nome");\ul\par
+\ulnone                     \ul leia\ulnone (nomeFuncionario);\ul\par
+\ulnone                     \ul escreva\ulnone ("Informe o seu sexo");\ul\par
+\ulnone                     \ul leia\ulnone (sexo);\ul\par
+\ulnone                     \ul escreva\ulnone ("Informe o seu peso");\ul\par
+\ulnone                     \ul leia\ulnone (peso);\ul\par
+\ulnone                     \ul escreva\ulnone ("Informe a sua altura");\ul\par
+\ulnone                     \ul leia\ulnone (altura);\ul\par
+\ulnone                     \ul escreva\ulnone ("Informe a sua idade");\ul\par
+\ulnone                     \ul leia\ulnone (idade);\ul\par
+\ulnone                     IMC \f1\u8592?\f0\lang22  (real) peso / (altura * altura);\ul\par
+\ulnone                     \ul escreva\ulnone (" A(O) funcion\'e1ria(o) ", nomeFuncionario, " tem IMC ", IMC);\ul\par
+\ulnone                     \ul se\ulnone  (IMC >= 30) \ul ent\'e3o\ulnone\par
+                         obeso++;\ul\par
+\ulnone                     \ul sen\'e3o se\ulnone  ((IMC <= 25 E sexo = 'M') OU (IMC <= 27 E sexo = 'F')) \ul ent\'e3o\par
+\ulnone                          normal++;\ul\par
+\ulnone                     \ul fim-se;\ulnone\par
+               \ul fim-para;\par
+\ulnone           \ul escreva\ulnone ("Obesos: ", obeso, "; Peso normal: ", normal);\ul\par
+\ulnone      \ul fim;\par
+fim-algoritmo.\ulnone\par
+_____________________________________________________________________\par
+7 - \cf1 Uma empresa fez uma pesquisa com 100 de seus funcion\'e1rios, coletando dados sobre o sal\'e1rio e n\'famero de filhos. A empresa deseja saber: a m\'e9dia salarial destes funcion\'e1rios; a m\'e9dia do n\'famero de filhos; e o percentual de pessoas com sal\'e1rio de at\'e9 R$ 300,00, que possuem filhos. \cf0\par
+\ul algoritmo\ulnone  SALARIO\par
+     \ul in\'edcio\par
+\ulnone           \ul inteiro:\ulnone  ciclo, numFilhos, totalFilhos \f1\u8592?\f0\lang22  0, filhoESalarioP \f1\u8592?\f0\lang22  0;\ul\par
+\ulnone           \ul real:\ulnone  salario, totalSalario \f1\u8592?\f0\lang22  0;\ul\par
+\ulnone           \ul para\ulnone  ciclo \ul de\ulnone  0 \ul at\'e9\ulnone  100 \ul passo\ulnone  1 \ul fa\'e7a\par
+\ulnone                \ul in\'edcio\ulnone\par
+                    \ul escreva\ulnone ("Informe o sal\'e1rio do funcion\'e1rio");\par
+                    \ul leia\ulnone (salario);\par
+                    \ul escreva\ulnone ("Informe o n\'famero de filhos");\par
+                    \ul leia\ulnone (numFilhos);\par
+                    totalSalario \f1\u8592?\f0\lang22  totalSalario + salario;\par
+                    totalFilhos \f1\u8592?\f0\lang22  totalFilhos + numFilhos;\par
+                    \ul se\ulnone  (salario <= 300 E numFilhos > 0) \ul ent\'e3o\ulnone\par
+                         filhoESalarioP++;\par
+                    \ul fim-se;\ulnone\par
+               \ul fim-para;\ulnone\par
+          \ul escreva\ulnone ("A m\'e9dia sal\'e1rial destes funcion\'e1rios \'e9 ", (real) totalSalario / 100);\par
+          \ul escreva\ulnone (" A m\'e9dia do n\'famero de filhos \'e9 ", (real) totalFilhos / 100);\par
+          \ul escreva\ulnone (" O percentual de pessoas com sal\'e1rio de at\'e9 R$ 300,00, que possuem filhos \'e9 ", filhoESalarioP, "%");\ul\par
+\ulnone      \ul fim;\par
+fim-algoritmo.\ulnone\par
+_____________________________________________________________________\par
+8 - \cf1 Fazer um algoritmo para determinar e escrever o valor do seguinte somat\'f3rio:\par
+
+\pard\sa200\sl276\slmult1\qc\b S = X \endash  X2/3! + X4/5! \endash  X6/7! + X8/!9 - ...\b0\par
+
+\pard\fi284\sa200\sl276\slmult1 Usando os \i n \i0 primeiros termos do somat\'f3rio. O valor de X e de \i n \i0\'e9 fornecido pelo usu\'e1rio.\cf0\par
+
+\pard\sa200\sl276\slmult1\ul algoritmo\ulnone  SOMATORIO\par
+     \ul fun\'e7\'e3o\ulnone  expoente(\ul inteiro:\ulnone  num) \ul inteiro\par
+\ulnone           \ul inicio\par
+\ulnone                \ul inteiro:\ulnone  res;\ul\par
+\ulnone                \ul se\ulnone  (num = 0) \ul ent\'e3o\par
+\ulnone                     retorna 1;\par
+               \ul sen\'e3o\par
+\ulnone                     res \f1\u8592?\f0\lang22  num * 2;\par
+               \ul fim-se;\ulnone\par
+               \ul retorna\ulnone  res;\par
+          \ul fim;\par
+\ulnone      \ul fim-fun\'e7\'e3o.\par
+\ulnone      \ul fun\'e7\'e3o\ulnone  fatorial(\ul inteiro:\ulnone  num) \ul inteiro\par
+\ulnone           \ul inicio\par
+\ulnone                \ul inteiro:\ulnone  res;\par
+               res \f1\u8592?\f0\lang22  num;\ul\par
+\ulnone                \ul enquanto\ulnone  (num >= 2) \ul fa\'e7a\par
+\ulnone                     res \f1\u8592?\f0\lang22  res * --num;\par
+               \ul fim-enquanto;\ulnone\par
+               \ul retorna\ulnone  res;\par
+          \ul fim;\par
+\ulnone      \ul fim-fun\'e7\'e3o.\par
+\ulnone\{programa-principal\}\par
+     \ul inicio\par
+\ulnone           \ul inteiro:\ulnone  ciclo \f1\u8592?\f0\lang22  1, valorX, valorN, numFatorial \f1\u8592?\f0\lang22  1, exp \f1\u8592?\f0\lang22  0, num1, num2;\ul\par
+\ulnone           \ul real:\ulnone  valorS \f1\u8592?\f0\lang22  0;\ul\par
+\ulnone           \ul escreva\ulnone ("Informe o valor de X");\ul\par
+\ulnone           \ul leia\ulnone (valorX);\ul\par
+\ulnone           \ul escreva\ulnone ("Informe o valor de n");\ul\par
+\ulnone           \ul leia\ulnone (valorN);\ul\par
+\ulnone           \ul para\ulnone  ciclo \ul de\ulnone  1 \ul at\'e9\ulnone  ciclo <= valorN \ul passo\ulnone  1 \ul fa\'e7a\par
+\ulnone                \ul in\'edcio\ulnone\par
+                    num1 \f1\u8592?\f0\lang22  fatorial(numFatorial);\par
+                    num2 \f1\u8592?\f0\lang22  expoente(exp);\par
+                    \ul se\ulnone  (ciclo MOD 2 = 1) \ul ent\'e3o\ulnone\par
+                         valorS \f1\u8592?\f0\lang22  valorS + (pow(valorX, num2) / num1);\par
+                    \ul sen\'e3o\ulnone\par
+                         valorS \f1\u8592?\f0\lang22  valorS - (pow(valorX, num2) / num1);\par
+                    numFatorial \f1\u8592?\f0\lang22  numFatorial + 2;\par
+                    exp++;\par
+               \ul fim;\ulnone\par
+          \ul fim-para;\par
+\ulnone      \ul fim;\par
+fim-algoritmo.\ulnone\par
+_____________________________________________________________________\par
+
+\pard\fi284\sl276\slmult1 9 - \cf1 Fazer um programa que calcule e escreva a soma dos 50 primeiros termos da s\'e9rie: \par
+
+\pard\fi284\sa200\sl240\slmult1\qc\cf0{\pict{\*\picprop}\wmetafile8\picw5186\pich1138\picwgoal2940\pichgoal645 
+0100090000039a3100000000843100000000050000000b0200000000050000000c027204421484
+310000430f2000cc0000002b00c40000000000720442140000000028000000c40000002b000000
+0100180000000000c4620000c40e0000c40e00000000000000000000ffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffc3f2ff3c42843c3c3c3c3c
+3c423c3cdaa55efffffdffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffdffffa8daf43c42703c3c3c4c3c3cb49670f9e8d0ffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffa8dcfdcd9674fffff4ffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffecffff5084c33c3c3c3c3c3c3c3c3ca55e3cfffddcffff
+ffc0e8fd4259873c3c3c70423cc5b296fdf4dcffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffd6f4ff4c70a53c3c3c3c3c3c967042e8d0b4fffffdffffffffffffffffffc3f2ff3c42
+843c3c3c3c3c3c423c3cdaa55efffffdffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff8ffff69a5
+dc87423cfdf2c3ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffff9ffff7ab4e6845942e8d0a8fffffdc0e8fd775e87f2da
+a5ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffdafdff8a61a5fdf2c3ffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffa5dcfd503c5eecc384ffffffffff
+ffffffffd0e8fdd0b7b7fffde8ffffffc9e8fd968499f9e8c3ffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffb4e6fd5e4274cda884fffde8e6fdff6987c3d6a570fffff4ffffffffffffffff
+fff8ffff69a5dc87423cfdf2c3ffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff8ff
+ff69a5dc87423cfdf2c3ffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdffff87c3
+f2b47447fffde6ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffff8ffff77a5dcecc384ffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffa5dcfd503c5eecc384ffff
+ffffffffffffffffffffffffffffffffffffffffffffc3f2ffc38787fffff2ffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffc3f2ff7a4784f9e6b4ffffffffff
+fffffffff8ffff69a5dc87423cfdf2c3ffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fff8ffff69a5dc87423cfdf2c3ffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffa5dcfd87425efdf2c3ffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffa5dcfdc38461fffff2ffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffa5dcfd503c5eecc3
+84ffffffffffffffffffffffffffffffffffffffffffffffffdafdff6d5ea5f8dca5ffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffdafdff555ea5ecc384ffff
+fffffffffffffff8ffff69a5dc87423cfdf2c3ffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffff8ffff69a5dc87423cfdf2c3ffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fff8ffff69a5dc87423cfdf2c3ffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffdafdff8a61a5fdf2c3ffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffa5dcfd503c
+5eecc384ffffffffffffffffffffffffffffffffffffffffffffffffc3f2ff504284ecc384ffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffa5dcfd503c5eecc3
+84fffffffffffffffffff8ffff69a5dc87423cfdf2c3ffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffff8ffff69a5dc87423cfdf2c3ffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffe8fdff84a8d03c3c59b47442fffde6ffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffff8ffff77a5dcecc384ffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffa5dc
+fd503c5eecc384ffffffffffffffffffffffffffffffffffffffffffe6fdff5e87c387423cfdf2
+c3ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffff9ffffaad0e84259847a42
+3cf9e6b4fffffffffffffffffff8ffff69a5dc87423cfdf2c3ffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffff8ffff69a5dc87423cfdf2c3ffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffecff
+ff5084c33c3c3c423c3cb48459fdf4dcffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffa5dcfdc384
+61fffff2ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffa5dcfd503c5eecc384ffffffffffffffffffffffffffffffe8fdffa3b7d0425984423c3ccd96
+59fffff4ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffdffff87c3f23c3c423c3c3c8759
+3cf2dcb4fffffffffffffffffffffffff8ffff69a5dc87423cfdf2c3ffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffff8ffff69a5dc87423cfdf2c3ffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffdffffc3dcf47784a5e6c387fffffdffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdafd
+ff7e61a5f9e6b4ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffa5dcfd503c5eecc384ffffffffffffffffffdafdff425ea53c3c3c3c3c3c423c3cb484
+59fdf4dcffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdcf4ff87a5
+c3c08770fffde8fffffffffffffffffffffffff8ffff69a5dc87423cfdf2c3ffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffff8ffff69a5dc87423cfdf2c3ffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffdafdff655ea5f0d096ffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffeafdfff2dedcffffffffffffffff
+fff8ffff6da5dcdaa55efffffdffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffa5dcfd503c5eecc384fffffffffffffffffffdffff87c3f2423c42a38459dcc3
+b4fffff4ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fff8ffff6da5dccd9659fffff4fffffffffffffffffff8ffff69a5dc87423cfdf2c3ffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffff8ffff69a5dc87423cfdf2c3ffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffc9defdf9e6c5ffffffffffffecffff5084c3c38442fffff2ffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffecffff9996c3f9e8c3ffff
+ffffffffffffffc3f2ffa56184fffddcffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffa5dcfd503c5eecc384ffffffffffffffffffffffffcdf4ff8a5e96fdf2
+c3ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe0fdffe4c5c5ffff
+fdfffffffdffff87c3f2874242fdf2c3fffffffffffffffffff8ffff69a5dc87423cfdf2c3ffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffa5dcfd706d613c426d87423cfdf2c3ffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffff0ffffb2b4d2f9e8cdf9ffff9ecde8504270ecc384ffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffa2a2a2b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1
+b1a4a4a4e0e0e0fffffffffffffffffffffffffffffffffffffffffffffffffdffff87c3f23c3c
+423c3c3c3c3c3c3c3c3c3c3c3c693c3cf8dca5ffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffdafdff6961a54c6d70503c3cecc384fffffffffffffffffffffffff9ffff7ab4
+e63c3c423c3c3c3c3c3ca55e3cfffddcffffffffffffffffffffffffffffffffffffa2a2a2b1b1
+b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1a4a4a4e0e0e0fffffffffffffffffffdffffb7d2
+f4e8cda8fffffdc9e8fd4c7099c38442fffff2ffffffffffffa5dcfd706d613c426d87423cfdf2
+c3ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffdffffc5dcf496b2b4874770fdf2c3ffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffe8fdff7099cd3c3c425e3c3cdab484fffff4ffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffb1b1b1ffffffffffffffffffffffffffffffffff
+ffffffffdfdfdfd8d8d8ffffffffffffffffffffffffffffffffffffffffffffffffffffffc3f2
+ff3c42843c3c3c3c3c3c3c3c3c3c3c3c423c3cdaa55efffffdffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffdcf4ffadb4c35e7096ecc384ffffffffffffffffffffffffffff
+ffc3f2ff3c42843c3c3c3c3c3c693c3cf8dca5ffffffffffffffffffffffffffffffffffffb1b1
+b1ffffffffffffffffffffffffffffffffffffffffffdfdfdfd8d8d8ffffffffffffffffffffff
+fff9ffff9ecde83c4270423c3cb48459fdf4dcfffffffffffffffffffdffffc5dcf496b2b48747
+70fdf2c3ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffff9ffff7ab4e6995942fdf4
+d0ffffffffffffb4e6fd614274f0d096fffffffffffffffffff9ffff7ab4e6995942fdf4d0ffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffb1b1b1ffffffffffffffffffffffffffff
+ffffffffffffffdfdfdfd8d8d8ffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffb1b1b1ffffffffffffffffffffffffffffffffffffffffffdfdfdfd8d8d8ffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff9ffff7ab4e69959
+42fdf4d0ffffffffffffb4e6fd614274f0d096fffffffffffffffffff9ffff7ab4e6995942fdf4
+d0ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffb1b1b1ffffffffffffffffffffff
+ffffffffffffffffffffdfdfdfd8d8d8ffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffb1b1b1ffffffffffffffffffffffffffffffffffffffffffdfdfdfd8d8d8ffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffb1b1b1ffffffffffffffff
+ffffffffffffffffffffffffffdfdfdfd8d8d8ffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffb1b1b1ffffffffffffffffffffffffffffffffffffffffffdfdfdfd8d8d8ffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffff3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c
+3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3cffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffff3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c
+3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3cffffffffffffb1b1b1ffffffffff
+ffffffffffffffffffffffffffffffffdfdfdfd8d8d8ffffffffffffffffffffffff3c3c3c3c3c
+3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c
+3c3c3c3c3c3c3c3c3c3c3c3c3cffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffff3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c
+3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c
+3c3c3c3cffffffffffffb1b1b1ffffffffffffffffffffffffffffffffffffffffffdfdfdfd8d8
+d8ffffffffffffffffffffffff3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c
+3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3cffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffff3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c
+3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3cffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffff3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c
+3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3cffffffffffffb1b1b1ffff
+ffffffffffffffffffffffffffffffffffffffdfdfdfd8d8d8ffffffffffffffffffffffff3c3c
+3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c
+3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3cffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffff3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c
+3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c
+3c3c3c3c3c3c3cffffffffffffb1b1b1ffffffffffffffffffffffffffffffffffffffffffdfdf
+dfd8d8d8ffffffffffffffffffffffff3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c
+3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3cffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffbffff77b4e83c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c593c3cf4d096ffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffb1b1
+b1ffffffffffffffffffffffffffffffffffffffffffdfdfdfd8d8d8ffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffbffff77b4e83c3c3c3c3c3c3c3c3c3c3c3c3c3c
+3c3c3c3c3c3c3c593c3cf4d096ffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffb1b1b1ffffffffffffffffffffffffffffffffffffffff
+ffdfdfdfd8d8d8ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffbffff77b4e83c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c593c3cf4d096ffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffbffff77b4e83c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c593c3cf4d096ffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffb1b1b1ffffffffffffffffffffffffffffffffffffffffffdfdfdfd8d8d8ffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffbffff77b4e83c3c3c3c3c3c3c3c3c3c3c
+3c3c3c3c3c3c3c3c3c3c593c3cf4d096ffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffb1b1b1ffffffffffffffffffffffffffffffffff
+ffffffffdfdfdfd8d8d8ffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffbffff77b4e83c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c593c3cf4d096ffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffb1b1b1ffffffffffffffffffffffffffffffffffffffffffdfdfdfd8d8d8ffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffb1b1b1ffffffffffffffffffffffffffff
+ffffffffffffffdfdfdfd8d8d8ffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdff
+ff87c3f23c3c423c3c3c3c3c3c693c3cf8dca5fffffffffffff4ffff5996d0773c3cfbe8b4ffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffff9ffff7ab4e63c3c423c3c3c3c3c3c3c3c3c3c3c
+3c423c3cdaa55efffffdfffffffffffff4ffff5996d0773c3cfbe8b4ffffffffffffffffffffff
+ffffffffffffffb1b1b1ffffffffffffffffffffffffffffffffffffffffffdfdfdfd8d8d8ffff
+ffffffffffffffffffffd6f4ff4c70a53c3c3c3c3c3c967042e8d0b4fffffdffffffffffffffff
+fffffffff4ffff5996d0773c3cfbe8b4ffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffecffff5084c3a55e3cfffddcfffffffffffffffffff4ffff5996
+d0773c3cfbe8b4ffffffffffffffffffffffffffffffffffffb1b1b1ffffffffffffffffffffff
+ffffffffffffffffffffdfdfdfd8d8d8ffffffffffffffffffffffffffffffe6fdff5e87c33c3c
+3c4c3c3caf9670f2dcc3fffffffffffffffffffffffff4ffff5996d0773c3cfbe8b4ffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffdafdff425ea5c38442fffff2ffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffff2ffff87b4dc3c3c593c3c3c3c3c
+3c3c3c3c3c3c3ca55e3cfffddcffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffff979797bebebebebebebebebebebebebebebebebebebebebea9a9a9d8d8
+d8ffffffffffffffffffffffffb4e6fd5e4274cda884fffde8e6fdff6987c3d6a570fffff4ffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffecffff5084c3a55e3cfffddcffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffff979797bebebebebebebebe
+bebebebebebebebebebebebebea9a9a9d8d8d8ffffffffffffffffffffffffffffffe8fdffbcb7
+d0f9e8d0ffffffe8fdff8799cde6c38afffffdffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffdafdff425ea5c38442fffff2fffffffffffffffffffffffff8ffffa3a8
+dcfdf2c3ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff9ffffa0c3e8e6c3
+99fffffdfffffff2ffffaaa8dafdf2c5fffffffffffffffffff8ffffa3a8dcfdf2c3ffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc3f2ff7a4784f9e6
+b4fffffffffffffffffffffffff8ffffa3a8dcfdf2c3ffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffecffff5084c3a55e3cfffddcffffffffffffffff
+fffffffff8ffffa3a8dcfdf2c3ffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffecffff9287c3fdf2c3fffffffffffffffffff8ffffa3a8dcfdf2
+c3ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffdafdff425ea5c38442fffff2ffffffffffffffffffffffffffff
+ffa5d0fbf4d09bffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff9ff
+ffa0b7e6f2daa8ffffffffffffffffffffffffffffffffffffffffffffffffa5d0fbf4d09bffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdafdff555e
+a5ecc384ffffffffffffffffffffffffffffffa5d0fbf4d09bffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffecffff5084c33c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c423c3cdaa55effff
+fdffffffffffffffffffa5d0fbf4d09bffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffff8ffff6da5dcdaa55efffffdffffffffffffffffffa5d0
+fbf4d09bffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffdafdff425ea5c38442fffff2ffffffffffffffffffffff
+ffffffffc5f2ffcd9996fffff4ffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffff0ffff8d99d0f2daa5ffffffffffffffffffffffffffffffffffffffffffc5f2ffcd99
+96fffff4ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffa5dc
+fd503c5eecc384ffffffffffffffffffffffffffffffc5f2ffcd9996fffff4ffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffdffffa0d0f4e2b487fffffdffffffecffff5084c3a55e3cfffddcffff
+ffffffffffffffffffffffffffc5f2ffcd9996fffff4ffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffecffff5084c3c38442fffff2ffffffffffffffff
+ffc5f2ffcd9996fffff4ffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffdafdff425ea5c38442fffff2ffffffffffffffff
+ffffffffffffffdafdff8a61a5fdf2c3ffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffcdf4ff9b7096fdf4d0ffffffffffffffffffffffffffffffffffffdafd
+ff8a61a5fdf2c3ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff9ffffaad0
+e84259847a423cf9e6b4ffffffffffffffffffffffffffffffdafdff8a61a5fdf2c3ffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffff0ffff9299d0f9e6b4ffffffecffff5084c3a55e3cfffd
+dcffffffffffffffffffffffffffffffdafdff8a61a5fdf2c3ffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffff9ffff8dc3e8503c59ecc384ffffffffffffffff
+ffffffffdafdff8a61a5fdf2c3ffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffdafdff425ea5c38442fffff2ffffffffff
+ffffffffffffffffffffecffff6184c3ecc384ffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffdffff8ac3f2cd965efffff4ffffffffffffffffffffffffffff
+ffecffff6184c3ecc384ffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdffff87c3f23c3c
+423c3c3c87593cf2dcb4ffffffffffffffffffffffffffffffffffffecffff6184c3ecc384ffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffcdf4ff9b7096fdf4d0ecffff5084c3a55e
+3cfffddcffffffffffffffffffffffffffffffecffff6184c3ecc384ffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffff9ffffbad0e85e84a53c3c3c99593cfdf4d0ffffffffff
+ffffffffffffffecffff6184c3ecc384ffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffdafdff425ea5c38442fffff2ffff
+fffffffffffffffffffffffffff8ffff69a5dcc38442fffff2ffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffc3f2ff7a4784f9e6b4ffffffffffffffffffffff
+fffffffff8ffff69a5dcc38442fffff2ffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffdcf4ff87a5c3c08770fffde8fffffffffffffffffffffffffffffffffffff8ffff69a5dcc384
+42fffff2ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffdffff9bd0f4cd9670ecfff45084
+c3a55e3cfffddcfffffffffffffffffffffffffffffff8ffff69a5dcc38442fffff2ffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffff8ffff69a5dc3c3c3c3c3c3c3c3c3c87593cf2dcb4ffffffffff
+fffffffffffffffffffff8ffff69a5dcc38442fffff2ffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffdafdff425ea5c38442ffff
+f2fffffffffffffffffffffffffffffffbffff77b4e887423cfdf2c3ffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffc3f2ff504284ecc384ffffffffffffffff
+fffffffffffffffbffff77b4e887423cfdf2c3ffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffff8ffff6da5dccd9659fffff4fffffffffffffffffffffffffffffffbffff77b4
+e887423cfdf2c3ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0ffff7e96d0dcd0
+965084c3a55e3cfffddcfffffffffffffffffffffffffffffffbffff77b4e887423cfdf2c3ffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffc3f2ff3c428484593cc5b4a5fdf4dcffffffffff
+fffffffffffffffffffffffffffbffff77b4e887423cfdf2c3ffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdafdff425ea5c384
+42fffff2ffffffffffffffffffffffffffffffffffff96d0fb503c47ecc384ffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffc9defdf9e6c5ffffffffffffffffffa5dcfd503c5eecc384ffffffffff
+ffffffffffffffffffffffffff96d0fb503c47ecc384ffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe0fd
+ffe4c5c5fffffdfffffffdffff87c3f2874242fdf2c3ffffffffffffffffffffffffffffffffff
+ff96d0fb503c47ecc384ffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffcdf4
+ff7e70964c7084a55e3cfffddcffffffffffffffffffffffffffffffffffff96d0fb503c47ecc3
+84ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffff0ffff7096d0ecc384ffffffffffffffff
+ffffffffffffffffffffffffffffffffffffff96d0fb503c47ecc384ffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffff8ffff74a5dc65706d3c3c
+42c38442fffff2ffffffffffffffffffffffffffffffffffffc3f2ff3c4284c38442fffff2ffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffe2fdffa099b7f2dcc0ffffffc9e8fd4c709999593cfdf4d0ffff
+ffffffffffffffffffffffffffffffffc3f2ff3c4284c38442fffff2ffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffdffffb7d2f4e8cda8fffffdc9e8fd4c7099c38442fffff2ffffffffffffffffffffffffffff
+ffffffffc3f2ff3c4284c38442fffff2ffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffb4e6fd3c4274a55e3cfffddcffffffffffffffffffffffffffffffffffffc3f2ff3c42
+84c38442fffff2ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffb4e6fd3c42743c3c3c3c3c
+3c693c3cf8dca5ffffffffffffffffffffffffffffffc3f2ff3c4284c38442fffff2ffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff2ffffb7c3
+dc7096b2c38447fffff2ffffffffffffffffffffffffffffffffffffecffff5084c3b4703cffff
+e8ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffdcf4ff7096c03c3c42423c3caa8459f9e8d0ffff
+ffffffffffffffffffffffffffffffffffffffecffff5084c3b4703cffffe8ffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffff9ffff9ecde83c4270423c3cb48459fdf4dcffffffffffffffffffffffffffff
+ffffffffffffffecffff5084c3b4703cffffe8ffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffff9ffff7ab4e6a55e42fffddcffffffffffffffffffffffffffffffffffffecff
+ff5084c3b4703cffffe8ffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffecffff5084c33c3c
+3c3c3c3c423c3cdaa55efffffdffffffffffffffffffffffffecffff5084c3b4703cffffe8ffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ff030000000000
+}\par
+
+\pard\sa200\sl276\slmult1\ul algoritmo\ulnone  \par
+     \ul fun\'e7\'e3o\ulnone  divisor(\ul inteiro:\ulnone  num) \ul inteiro\par
+\ulnone           \ul inicio\par
+\ulnone                \ul inteiro:\ulnone  res;\par
+               res \f1\u8592?\f0\lang22  pow(2, num) - 1;\par
+               \ul retorna\ulnone  res;\par
+          \ul fim;\par
+\ulnone      \ul fim-fun\'e7\'e3o.\par
+\ulnone      \ul fun\'e7\'e3o\ulnone  fatorial(\ul inteiro:\ulnone  num) \ul inteiro\par
+\ulnone           \ul inicio\par
+\ulnone                \ul inteiro:\ulnone  res;\par
+               res \f1\u8592?\f0\lang22  num;\ul\par
+\ulnone                \ul enquanto\ulnone  (num >= 2) \ul fa\'e7a\par
+\ulnone                     res \f1\u8592?\f0\lang22  res * --num;\par
+               \ul fim-enquanto;\ulnone\par
+               \ul retorna\ulnone  res;\par
+          \ul fim;\par
+\ulnone      \ul fim-fun\'e7\'e3o.\par
+\ulnone\{programa-principal\}\par
+     \ul in\'edcio\par
+\ulnone           \ul inteiro:\ulnone  valorX, numFatorial, exp, num1, num2;\ul\par
+\ulnone           \ul real:\ulnone  res \f1\u8592?\f0\lang22  0;\ul\par
+\ulnone           \ul para\ulnone  numFatorial \ul de\ulnone  0 \ul at\'e9\ulnone  50 \ul passo\ulnone  1 \ul fa\'e7a\par
+\ulnone                \ul in\'edcio\ulnone\par
+                    num1 \f1\u8592?\f0\lang22  fatorial(numFatorial);\par
+                    num2 \f1\u8592?\f0\lang22  divisor(numFatorial);\par
+                    \ul se\ulnone  (numFatorial MOD 2 = 1) \ul ent\'e3o\par
+\ulnone                          res \f1\u8592?\f0\lang22  res + (real) num1 / num2;\par
+                    \ul sen\'e3o\par
+\ulnone                          res = res - (real) num1 / num2;\par
+                    \ul fim-se;\ulnone\par
+               \ul fim;\par
+\ulnone           \ul fim-para;\par
+\ulnone           \ul escreva(\ulnone "R = ", res);\par
+     \ul fim;\par
+fim-algoritmo.\ulnone\par
+_____________________________________________________________________\par
+
+\pard\sl276\slmult1 10 - \cf1 Fa\'e7a um programa que leia 10 n\'fameros inteiros positivos, calcule e escreva os que s\'e3o n\'fameros perfeitos. Sendo que, um n\'famero perfeito \'e9 aquele cuja soma de seus divisores, exceto ele pr\'f3prio, \'e9 igual ao n\'famero.\par
+
+\pard\fi568\sl276\slmult1 Exemplo:\par
+6 \'e9 perfeito porque 1 + 2 + 3 = 6\par
+
+\pard\fi568\sa200\sl276\slmult1 28 \'e9 perfeito porque 1 + 2 + 4 + 7 + 14 = 28\cf0\par
+
+\pard\sa200\sl276\slmult1\ul algoritmo\ulnone  \par
+     \ul inicio\par
+\ulnone           \ul inteiro:\ulnone  num, divisor, soma \f1\u8592?\f0\lang22  0;\ul\par
+\ulnone           \ul escreva\ulnone ("Informe um n\'famero");\ul\par
+\ulnone           \ul leia\ulnone (num);\ul\par
+\ulnone           \ul para\ulnone  divisor \ul de\ulnone  1 \ul at\'e9\ulnone  divisor < num \ul passo\ulnone  1 \ul fa\'e7a\par
+\ulnone                \ul in\'edcio\ulnone\par
+                    \ul se\ulnone  (num MOD divisor = 0) \ul ent\'e3o\ulnone\par
+                         soma \f1\u8592?\f0\lang22  soma + divisor;\par
+                    \ul fim-se;\ulnone\par
+               \ul fim-para;\par
+\ulnone           \ul se\ulnone  (soma = num) \ul ent\'e3o\ulnone\par
+               \ul escreva\ulnone (num, " \'e9 perfeito!");\par
+          \ul sen\'e3o\ulnone\par
+               \ul escreva\ulnone (num, " n\'e3o \'e9 perfeito!");\par
+          \ul fim-se;\ulnone\par
+     \ul fim;\par
+fim-algoritmo.\ulnone\par
+_____________________________________________________________________\fs22\par
+}
+ 

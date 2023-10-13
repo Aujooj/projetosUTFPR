@@ -1,0 +1,299 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1046{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset1 Cambria Math;}}
+{\colortbl ;\red0\green0\blue9;\red0\green0\blue0;}
+{\*\generator Riched20 10.0.19041}{\*\mmathPr\mmathFont1\mwrapIndent1440 }\viewkind4\uc1 
+\pard\sl276\slmult1\f0\fs24\lang22 12 - \cf1 Escrever um programa que l\'ea um conjunto de 4 valores i, a, b, c, onde i \'e9 um valor inteiro e positivo e a, b, c, s\'e3o quaisquer valores reais e os escreva. A seguir: \par
+1. Se i = 1 escrever os tr\'eas valores a, b, c em ordem crescente. \par
+2. Se i = 2 escrever os tr\'eas valores a, b, c em ordem decrescente. \par
+
+\pard\sa200\sl276\slmult1 3. Se i = 3 escrever os tr\'eas valores a, b, c de forma que o maior entre a, b, c fique dentre os dois\cf0 .\par
+\ul algoritmo\ulnone  ORGANIZA_NUMERO\par
+     \ul inicio\par
+\ulnone           \ul inteiro:\ulnone  valorI;\par
+          \ul real:\ulnone  valorA, valorB, valorC;\par
+          \ul escreva\ulnone ("Escolha um valor entre 1, 2 e 3, e escreva-o; e insira outros tr\'eas valores reais");\par
+          \ul leia\ulnone (valorI, valorA, valorB, valorC);\par
+          \ul se\ulnone  (i = 1) \ul ent\'e3o\par
+\ulnone                \ul se\ulnone  (valor A > valorB E valorA > valorC) \ul ent\'e3o\par
+\ulnone                     \ul se\ulnone  (valorB  > valorC) \ul ent\'e3o\par
+\ulnone                          \ul escreva\ulnone (valorA, valorB, valorC);\ul\par
+\ulnone                     \ul sen\'e3o\par
+\ulnone                          \ul escreva\ulnone (valorA, valorC, valorB);\ul\par
+\ulnone                \ul sen\'e3o se\ulnone  (valor B > valorA E valorB > valorC) \ul ent\'e3o\par
+\ulnone                     \ul se\ulnone  (valorA  > valorC) \ul ent\'e3o\par
+\ulnone                          \ul escreva\ulnone (valorB, valorA, valorC);\ul\par
+\ulnone                     \ul sen\'e3o\par
+\ulnone                          \ul escreva\ulnone (valorB, valorC, valorA);\ul\par
+\ulnone                \ul sen\'e3o\par
+\ulnone                     \ul se\ulnone  (valorA  > valorB) \ul ent\'e3o\par
+\ulnone                          \ul escreva\ulnone (valorC, valorA, valorB);\ul\par
+\ulnone                     \ul sen\'e3o\par
+\ulnone                          \ul escreva\ulnone (valorC, valorB, valorA);\par
+               \ul fim-se;\ulnone\par
+          \ul sen\'e3o se\ulnone  (i = 2) \ul ent\'e3o\par
+\ulnone                 \ul se\ulnone  (valor A < valorB E valorA < valorC) \ul ent\'e3o\par
+\ulnone                     \ul se\ulnone  (valorB  < valorC) \ul ent\'e3o\par
+\ulnone                          \ul escreva\ulnone (valorA, valorB, valorC);\ul\par
+\ulnone                     \ul sen\'e3o\par
+\ulnone                          \ul escreva\ulnone (valorA, valorC, valorB);\ul\par
+\ulnone                \ul sen\'e3o se\ulnone  (valor B < valorA E valorB < valorC) \ul ent\'e3o\par
+\ulnone                     \ul se\ulnone  (valorA  < valorC) \ul ent\'e3o\par
+\ulnone                          \ul escreva\ulnone (valorB, valorA, valorC);\ul\par
+\ulnone                     \ul sen\'e3o\par
+\ulnone                          \ul escreva\ulnone (valorB, valorC, valorA);\ul\par
+\ulnone                \ul sen\'e3o\par
+\ulnone                     \ul se\ulnone  (valorA  < valorB) \ul ent\'e3o\par
+\ulnone                          \ul escreva\ulnone (valorC, valorA, valorB);\ul\par
+\ulnone                     \ul sen\'e3o\par
+\ulnone                          \ul escreva\ulnone (valorC, valorB, valorA);\par
+               \ul fim-se;\ulnone\par
+          \ul sen\'e3o\par
+\ulnone                \ul se\ulnone  (valorA < valorB E valorA < valorC) \ul ent\'e3o\par
+\ulnone                     \ul escreva\ulnone (valorB, valor A, valorC);\ul\par
+\ulnone                \ul sen\'e3o se\ulnone  (valorB < valorA E valorB < valorC) \ul ent\'e3o\par
+\ulnone                     \ul escreva\ulnone (valorA, valor B, valorC);\ul\par
+\ulnone                \ul sen\'e3o\par
+\ulnone                     \ul escreva\ulnone (valorA, valor C, valorB);\par
+               \ul fim-se;\ulnone\par
+          \ul fim-se;\par
+\ulnone      \ul fim;\par
+fim-algoritmo.\par
+_____________________________________________________________________\par
+\ulnone 13 - \cf1 Fa\'e7a um programa que leia duas notas obtidas por um aluno na disciplina de C\'e1lculo, o n\'famero de aulas ministradas e o n\'famero de aulas assistidas por este aluno nesta disciplina. Calcule e mostre a m\'e9dia final deste aluno e diga se ele foi aprovado ou reprovado. Considere que para um aluno ser aprovado ele deve obter m\'e9dia final igual ou maior a 6 e ter no m\'ednimo 75% de frequ\'eancia\cf0 .\par
+\ul algoritmo\ulnone  CALCULO\par
+     \ul inicio\par
+\ulnone           \ul inteiro:\ulnone  num_aulas, num_vistas;\par
+          \ul real:\ulnone  nota1, nota2;\par
+          \ul escreva\ulnone ("Insira as suas duas notas, o n\'famero de aulas ministradas, e quantas o aluno assistiu");\par
+          \ul leia\ulnone (nota1, nota2, num_aulas, num,vistas);\par
+          \ul escreva\ulnone ("A m\'e9dia final deste aluno \'e9 ", (nota1 + nota2)/2), " e ele est\'e1 ";\par
+          \ul se\ulnone  ((nota1 + nota2)/2 >= 6 E num_vistas/num_aulas >= 0,75) \ul ent\'e3o\par
+\ulnone                \ul escreva\ulnone ("Aprovado");\par
+          \ul sen\'e3o\par
+\ulnone                \ul escreva\ulnone ("Reprovado");\par
+          \ul fim-se;\ulnone\par
+     \ul fim;\par
+fim-algoritmo.\par
+_____________________________________________________________________\par
+\ulnone 14 - \cf1 O departamento que controla o \'edndice de polui\'e7\'e3o do meio ambiente mant\'e9m 3 grupos de ind\'fastrias que s\'e3o altamente poluentes do meio ambiente. O \'edndice de polui\'e7\'e3o aceit\'e1vel varia de 0,05 at\'e9 0,25. Se o \'edndice sobe para 0,3 as ind\'fastrias do 1\'b0 grupo s\'e3o intimadas a suspenderem suas atividades, se o \'edndice cresce para 0,4 as do 1\'b0 e 2\'b0 grupo s\'e3o intimadas a suspenderem suas atividades e se o \'edndice atingir 0,5 todos os 3 grupos devem ser notificados a paralisarem suas atividades. Escrever um programa que l\'ea o \'edndice de polui\'e7\'e3o medido e emite a notifica\'e7\'e3o adequada aos diferentes grupos de empresas\cf0  .\par
+\ul algoritmo\ulnone  POLUICAO\par
+     \ul inicio\par
+\ulnone           \ul real:\ulnone  indice_poluicao;\par
+          \ul escreva\ulnone ("Informe o indice de polui\'e7\'e3o");\par
+          \ul leia\ulnone (indice_poluicao);\par
+          \ul se\ulnone  (indice_poluicao < 0,05) \ul ent\'e3o\par
+\ulnone                \ul escreva\ulnone ("O indice de polui\'e7\'e3o est\'e1 bom");\par
+          \ul sen\'e3o se\ulnone  (indice_poluicao < 0,3) \ul ent\'e3o\par
+\ulnone                \ul escreva\ulnone ("O indice de polui\'e7\'e3o est\'e1 aceit\'e1vel");\par
+          \ul sen\'e3o se\ulnone  (indice_poluicao < 0,4) \ul ent\'e3o\par
+\ulnone                \ul escreva\ulnone ("\cf1 As ind\'fastrias do 1\'b0 grupo devem ser intimadas a suspenderem suas atividades\cf0 ");\par
+          \ul sen\'e3o se\ulnone  (indice_poluicao < 0,5) \ul ent\'e3o\par
+\ulnone                \ul escreva\ulnone ("\cf1 As ind\'fastrias do 1\'b0 e 2\'b0 grupo devem ser intimadas a suspenderem suas atividades\cf0 ");\par
+          \ul sen\'e3o\par
+\ulnone                \ul escreva\ulnone ("Todas a\cf1 s ind\'fastrias devem ser intimadas a suspenderem suas atividades\cf0 ");\par
+          \ul fim-se;\ulnone\par
+     \ul fim;\par
+fim-algoritmo.\par
+_____________________________________________________________________\par
+\ulnone 15 - \cf1 Escreva um programa para ler as coordenadas (X,Y) de um ponto no sistema cartesiano e escrever o quadrante ao qual o ponto pertence. Caso o ponto n\'e3o perten\'e7a a nenhum quadrante, escrever se ele esta' sobre o eixo X, eixo Y ou na origem\cf0 .\par
+\ul algoritmo\ulnone  QUADRANTES\par
+     \ul inicio\par
+\ulnone           \ul inteiro:\ulnone  valorX, valorY;\par
+          \ul escreva\ulnone ("Informe os valores de X e Y");\par
+          \ul leia\ulnone (valorX, valorY);\par
+          \ul se\ulnone  (valorX = 0 E valorY = 0) \ul ent\'e3o\par
+\ulnone                \ul escreva\ulnone ("O ponto est\'e1 na origem");\ul\par
+\ulnone           \ul sen\'e3o se\ulnone  (valorX <> 0 E valorY = 0) \ul ent\'e3o\par
+\ulnone               \ul escreva\ulnone ("O ponto est\'e1 no eixo das abscissas"); \ul\par
+\ulnone           \ul sen\'e3o se\ulnone  (valorX = 0 E valorY <> 0) \ul ent\'e3o\par
+\ulnone                \ul escreva\ulnone ("O ponto est\'e1 no eixo das ordenadas");\ul\par
+\ulnone           \ul sen\'e3o se\ulnone  (valorX > 0 E valor Y > 0) \ul ent\'e3o\par
+\ulnone                \ul escreva\ulnone ("O ponto est\'e1 no 1\'b0 Quadrante");\ul\par
+\ulnone           \ul sen\'e3o se\ulnone  (valorX < 0 E valor Y > 0) \ul ent\'e3o\par
+\ulnone                \ul escreva\ulnone ("O ponto est\'e1 no 2\'b0 Quadrante");\ul\par
+\ulnone           \ul sen\'e3o se\ulnone  (valorX < 0 E valor Y < 0) \ul ent\'e3o\par
+\ulnone                \ul escreva\ulnone ("O ponto est\'e1 no 3\'b0 Quadrante");\ul\par
+\ulnone           \ul sen\'e3o\par
+\ulnone                \ul escreva\ulnone ("O ponto est\'e1 no 4\'b0 Quadrante");\ul\par
+\ulnone           \ul fim-se;\par
+\ulnone      \ul fim;\par
+fim-algoritmo.\par
+_____________________________________________________________________\par
+\ulnone 16 - \cf1 Dados tr\'eas valores X, Y e Z, verificar se eles podem ser os comprimentos dos lados de um tri\'e2ngulo e, se forem, verificar se \'e9 um tri\'e2ngulo equil\'e1tero, is\'f3sceles ou escaleno. Se eles n\'e3o formarem um tri\'e2ngulo, escreva uma mensagem\cf0 .\par
+\ul algoritmo\ulnone  TRIANGULO\par
+     \ul inicio\par
+\ulnone           \ul inteiro:\ulnone  valorX, valorY, valorZ;\par
+          \ul escreva\ulnone ("Insira os valores dos 3 lados do tri\'e2ngulo");\par
+          \ul leia\ulnone (valorX, valorY, valorZ);\par
+          \ul se\ulnone  (valorX+valorY>valorZ E valorX+valorZ>valorY E valorY+valorZ>valorX) \ul ent\'e3o\par
+\ulnone                \ul se\ulnone  (valorX = valorY E valorY = valorZ) \ul ent\'e3o\par
+\ulnone                     \ul escreva\ulnone ("Esse tri\'e2ngulo \'e9 equil\'e1tero");\par
+               \ul sen\'e3o\ulnone  (valorX <> valorY E valorY <> valorZ) \ul ent\'e3o\par
+\ulnone                     \ul escreva\ulnone ("Esse tri\'e2ngulo \'e9 escaleno");\ul\par
+\ulnone                \ul sen\'e3o\par
+\ulnone                     \ul escreva\ulnone ("Esse tri\'e2ngulo \'e9 is\'f3sceles");\ul\par
+\ulnone                \ul fim-se;\ulnone\par
+          \ul sen\'e3o\par
+\ulnone                \ul escreva\ulnone ("Os valores informados n\'e3o formam um tri\'e2ngulo");\ul\par
+\ulnone           \ul fim-se;\ulnone\par
+     \ul fim;\par
+fim-algoritmo.\par
+_____________________________________________________________________\par
+\ulnone 17 - \cf1 Fa\'e7a um algoritmo que leia um n\'famero que represente um determinado m\'eas do ano. Ap\'f3s a leitura escreva por extenso qual o m\'eas lido. Caso o n\'famero digitado n\'e3o esteja na faixa de 1 ao 12 escreva uma mensagem informando o usu\'e1rio do erro da digita\'e7\'e3o. Depois de ser confirmado o m\'eas devera ser pedido o dia e o ano onde ser\'e1 aceito apenas quantos dias o m\'eas possui (Ex: fevereiro possui 28 dias). Escrever a data informada por extenso (18/09/2015 \endash  18 de setembro de 2015).\cf0\par
+\ul algoritmo\ulnone  CALENDARIO\par
+     \ul inicio\par
+\ulnone           \ul inteiro:\ulnone  dia, mes, ano;\par
+          \ul escreva\ulnone ("Informe o n\'famero do m\'eas");\par
+          \ul leia\ulnone (mes);\par
+          \ul se\ulnone  (mes <= 0 OU mes > 12) \ul ent\'e3o\par
+\ulnone                \ul escreva\ulnone ("O n\'famero digitado n\'e3o representa um m\'eas");\ul\par
+\ulnone           \ul sen\'e3o\par
+\ulnone                \ul se\ulnone  (mes = 1) \ul ent\'e3o\par
+\ulnone                     \ul escreva\ulnone ("Janeiro");\ul\par
+\ulnone                     \ul escreva\ulnone ("Informe o dia e o ano");\par
+                    \ul leia\ulnone (dia, ano);\par
+                    \ul se\ulnone  (dia >= 1 E dia <= 31) \ul ent\'e3o\par
+\ulnone                          \ul escreva\ulnone (dia,"/", mes,"/", ano," - ", dia," de janeiro de ",ano);\par
+                    \ul sen\'e3o\par
+\ulnone                          \ul escreva\ulnone ("O dia n\'e3o atende os pr\'e9-requisitos deste m\'eas");\par
+                    \ul fim-se;\par
+\ulnone                \ul sen\'e3o\ulnone  (mes = 2) \ul ent\'e3o\par
+\ulnone                     \ul escreva\ulnone ("Fevereiro");\ul\par
+\ulnone                     \ul escreva\ulnone ("Informe o dia e o ano");\par
+                    \ul leia\ulnone (dia, ano);\par
+                    \ul se\ulnone  ((ano MOD 4) = 0) \ul ent\'e3o\ulnone\par
+                         \ul se\ulnone  (dia >= 1 E dia <= 29) \ul ent\'e3o\par
+\ulnone                               \ul escreva\ulnone (dia,"/", mes,"/", ano," - ", dia," de fevereiro de ",ano);\par
+                         \ul sen\'e3o\par
+\ulnone                               \ul escreva\ulnone ("O dia n\'e3o atende os pr\'e9-requisitos deste m\'eas");\par
+                    \ul sen\'e3o\ulnone\par
+                         \ul se\ulnone  (dia >= 1 E dia <= 28) \ul ent\'e3o\par
+\ulnone                               \ul escreva\ulnone (dia,"/", mes,"/", ano," - ", dia," de fevereiro de ",ano);\par
+                         \ul sen\'e3o\par
+\ulnone                               \ul escreva\ulnone ("O dia n\'e3o atende os pr\'e9-requisitos deste m\'eas");\par
+                         \ul fim-se;\par
+\ulnone                     \ul fim-se;\par
+\ulnone                \ul sen\'e3o\ulnone  (mes = 3) \ul ent\'e3o\par
+\ulnone                     \ul escreva\ulnone ("Mar\'e7o");\ul\par
+\ulnone                     \ul escreva\ulnone ("Informe o dia e o ano");\par
+                    \ul leia\ulnone (dia, ano);\par
+                    \ul se\ulnone  (dia >= 1 E dia <= 31) \ul ent\'e3o\par
+\ulnone                          \ul escreva\ulnone (dia,"/", mes,"/", ano," - ", dia," de mar\'e7o de ",ano);\par
+                    \ul sen\'e3o\par
+\ulnone                          \ul escreva\ulnone ("O dia n\'e3o atende os pr\'e9-requisitos deste m\'eas");\par
+                    \ul fim-se;\par
+\ulnone                \ul sen\'e3o\ulnone  (mes = 4) \ul ent\'e3o\par
+\ulnone                     \ul escreva\ulnone ("Abril");\ul\par
+\ulnone                     \ul escreva\ulnone ("Informe o dia e o ano");\par
+                    \ul leia\ulnone (dia, ano);\par
+                    \ul se\ulnone  (dia >= 1 E dia <= 30) \ul ent\'e3o\par
+\ulnone                          \ul escreva\ulnone (dia,"/", mes,"/", ano," - ", dia," de abril de ",ano);\par
+                    \ul sen\'e3o\par
+\ulnone                          \ul escreva\ulnone ("O dia n\'e3o atende os pr\'e9-requisitos deste m\'eas");\par
+                    \ul fim-se;\par
+\ulnone                \ul sen\'e3o\ulnone  (mes = 5) \ul ent\'e3o\par
+\ulnone                     \ul escreva\ulnone ("Maio");\ul\par
+\ulnone                     \ul escreva\ulnone ("Informe o dia e o ano");\par
+                    \ul leia\ulnone (dia, ano);\par
+                    \ul se\ulnone  (dia >= 1 E dia <= 31) \ul ent\'e3o\par
+\ulnone                          \ul escreva\ulnone (dia,"/", mes,"/", ano," - ", dia," de maio de ",ano);\par
+                    \ul sen\'e3o\par
+\ulnone                          \ul escreva\ulnone ("O dia n\'e3o atende os pr\'e9-requisitos deste m\'eas");\par
+                    \ul fim-se;\par
+\ulnone                \ul sen\'e3o\ulnone  (mes = 6) \ul ent\'e3o\par
+\ulnone                     \ul escreva\ulnone ("Junho");\ul\par
+\ulnone                     \ul escreva\ulnone ("Informe o dia e o ano");\par
+                    \ul leia\ulnone (dia, ano);\par
+                    \ul se\ulnone  (dia >= 1 E dia <= 30) \ul ent\'e3o\par
+\ulnone                          \ul escreva\ulnone (dia,"/", mes,"/", ano," - ", dia," de junho de ",ano);\par
+                    \ul sen\'e3o\par
+\ulnone                          \ul escreva\ulnone ("O dia n\'e3o atende os pr\'e9-requisitos deste m\'eas");\par
+                    \ul fim-se;\par
+\ulnone                \ul sen\'e3o\ulnone  (mes = 7) \ul ent\'e3o\par
+\ulnone                     \ul escreva\ulnone ("Julho");\ul\par
+\ulnone                     \ul escreva\ulnone ("Informe o dia e o ano");\par
+                    \ul leia\ulnone (dia, ano);\par
+                    \ul se\ulnone  (dia >= 1 E dia <= 31) \ul ent\'e3o\par
+\ulnone                          \ul escreva\ulnone (dia,"/", mes,"/", ano," - ", dia," de julho de ",ano);\par
+                    \ul sen\'e3o\par
+\ulnone                          \ul escreva\ulnone ("O dia n\'e3o atende os pr\'e9-requisitos deste m\'eas");\par
+                    \ul fim-se;\par
+\ulnone                \ul sen\'e3o\ulnone  (mes = 8) \ul ent\'e3o\par
+\ulnone                     \ul escreva\ulnone ("Agosto");\ul\par
+\ulnone                     \ul escreva\ulnone ("Informe o dia e o ano");\par
+                    \ul leia\ulnone (dia, ano);\par
+                    \ul se\ulnone  (dia >= 1 E dia <= 31) \ul ent\'e3o\par
+\ulnone                          \ul escreva\ulnone (dia,"/", mes,"/", ano," - ", dia," de agosto de ",ano);\par
+                    \ul sen\'e3o\par
+\ulnone                          \ul escreva\ulnone ("O dia n\'e3o atende os pr\'e9-requisitos deste m\'eas");\par
+                    \ul fim-se;\par
+\ulnone                \ul sen\'e3o\ulnone  (mes = 9) \ul ent\'e3o\par
+\ulnone                     \ul escreva\ulnone ("Setembro");\ul\par
+\ulnone                     \ul escreva\ulnone ("Informe o dia e o ano");\par
+                    \ul leia\ulnone (dia, ano);\par
+                    \ul se\ulnone  (dia >= 1 E dia <= 30) \ul ent\'e3o\par
+\ulnone                          \ul escreva\ulnone (dia,"/", mes,"/", ano," - ", dia," de setembro de ",ano);\par
+                    \ul sen\'e3o\par
+\ulnone                          \ul escreva\ulnone ("O dia n\'e3o atende os pr\'e9-requisitos deste m\'eas");\par
+                    \ul fim-se;\par
+\ulnone                \ul sen\'e3o\ulnone  (mes = 10) \ul ent\'e3o\par
+\ulnone                     \ul escreva\ulnone ("Outubro");\ul\par
+\ulnone                     \ul escreva\ulnone ("Informe o dia e o ano");\par
+                    \ul leia\ulnone (dia, ano);\par
+                    \ul se\ulnone  (dia >= 1 E dia <= 31) \ul ent\'e3o\par
+\ulnone                          \ul escreva\ulnone (dia,"/", mes,"/", ano," - ", dia," de outubro de ",ano);\par
+                    \ul sen\'e3o\par
+\ulnone                          \ul escreva\ulnone ("O dia n\'e3o atende os pr\'e9-requisitos deste m\'eas");\par
+                    \ul fim-se;\par
+\ulnone                \ul sen\'e3o\ulnone  (mes = 11) \ul ent\'e3o\par
+\ulnone                     \ul escreva\ulnone ("Novembro");\ul\par
+\ulnone                     \ul escreva\ulnone ("Informe o dia e o ano");\par
+                    \ul leia\ulnone (dia, ano);\par
+                    \ul se\ulnone  (dia >= 1 E dia <= 30) \ul ent\'e3o\par
+\ulnone                          \ul escreva\ulnone (dia,"/", mes,"/", ano," - ", dia," de novembro de ",ano);\par
+                    \ul sen\'e3o\par
+\ulnone                          \ul escreva\ulnone ("O dia n\'e3o atende os pr\'e9-requisitos deste m\'eas");\par
+                    \ul fim-se;\par
+\ulnone                \ul sen\'e3o\par
+\ulnone                     \ul escreva\ulnone ("Dezembro");\ul\par
+\ulnone                     \ul escreva\ulnone ("Informe o dia e o ano");\par
+                    \ul leia\ulnone (dia, ano);\par
+                    \ul se\ulnone  (dia >= 1 E dia <= 31) \ul ent\'e3o\par
+\ulnone                          \ul escreva\ulnone (dia,"/", mes,"/", ano," - ", dia," de Dezembro de ",ano);\par
+                    \ul sen\'e3o\par
+\ulnone                          \ul escreva\ulnone ("O dia n\'e3o atende os pr\'e9-requisitos deste m\'eas");\par
+                    \ul fim-se;\par
+\ulnone                \ul fim-se;\par
+\ulnone           \ul fim-se;\ulnone\par
+     \ul fim;\par
+fim-algoritmo._____________________________________________________________________\par
+\ulnone 18 - \cf2 Leia a hora inicial e a hora final de um jogo. A seguir calcule a dura\'e7\'e3o do jogo, sabendo que o mesmo pode come\'e7ar em um dia e terminar em outro, tendo uma dura\'e7\'e3o m\'e1xima de 24 horas.\cf0\par
+\ul algoritmo\ulnone  TEMPO_JOGO\par
+     \ul inicio\par
+\ulnone           \ul inteiro:\ulnone  hora1, hora2, minutos1, minutos2, conta1, conta2;\par
+          \ul escreva\ulnone ("Informe o hor\'e1rio dos dois jogos");\par
+          \ul leia\ulnone (hora1, minutos1, hora2, minutos2);\par
+          conta1 \f1\u8592?\f0\lang1046  hora2 - hora1;\par
+\lang22           conta2 \f1\u8592?\f0\lang1046  minutos2 - minutos1;\lang22\par
+          \ul se\ulnone  (conta1 > 0) \ul ent\'e3o\par
+\ulnone                \ul se\ulnone  (conta2 > 0) \ul ent\'e3o\par
+\ulnone                     \ul escreva\ulnone ("O jogo teve dura\'e7\'e3o de ", conta1, ":", conta2, " horas");\par
+               \ul sen\'e3o\par
+\ulnone                     \ul escreva\ulnone ("O jogo teve dura\'e7\'e3o de ", conta1, ":", conta2 + 60, " horas");\par
+               \ul fim-se;\ulnone\par
+          \ul sen\'e3o se\ulnone  (conta1 < 0) \ul ent\'e3o\par
+\ulnone                \ul se\ulnone  (conta2 > 0) \ul ent\'e3o\par
+\ulnone                     \ul escreva\ulnone ("O jogo teve dura\'e7\'e3o de ", conta1 + 24, ":", conta2, " horas");\par
+               \ul sen\'e3o\par
+\ulnone                     \ul escreva\ulnone ("O jogo teve dura\'e7\'e3o de ", conta1 + 24, ":", conta2 + 60, " horas");\par
+               \ul fim-se;\par
+\ulnone           \ul sen\'e3o\par
+\ulnone                \ul escreva\ulnone ("O jogo teve dura\'e7\'e3o de 24:00 horas");\par
+          \ul fim-se;\ulnone\par
+     \ul fim;\par
+fim-algoritmo.\par
+\par
+\par
+\par
+\ulnone\fs22\par
+}
+ 
